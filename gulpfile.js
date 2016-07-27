@@ -55,7 +55,9 @@ gulp.task('default', ['build']);
  */
 
 var gutil = require('gulp-util');
-var handlebars = require('node-handlebars');
+//var handlebars = require('node-handlebars');
+var handlebars = require('handlebars');
+var registrar = require('handlebars-registrar');
 var through = require('through2');
 var path = require('path');
 var htmlToJson = require('html-to-json');
@@ -95,23 +97,23 @@ gulp.task('new-snippet', function(cb) {
     );
 
     // New snippet html
-    var hbs = handlebars.create({
-        minimize:    false,
-        extname:     '.hbs'
-    });
-
-    hbs.engine('templates/snippet.hbs', { name: options['name'] }, function(err, html) {
-        if (err) {
-            throw new gutil.PluginError('gulp-pattern-library', 'Could not render snippet: ' + err);
-        }
-
-        fs.writeFileSync(
-            htmlDir + "/" + options['name'] + ".html",
-            html
-        );
-
-        cb();
-    });
+    //var hbs = handlebars.create({
+    //    minimize:    false,
+    //    extname:     '.hbs'
+    //});
+    //
+    //hbs.engine('templates/snippet.hbs', { name: options['name'] }, function(err, html) {
+    //    if (err) {
+    //        throw new gutil.PluginError('gulp-pattern-library', 'Could not render snippet: ' + err);
+    //    }
+    //
+    //    fs.writeFileSync(
+    //        htmlDir + "/" + options['name'] + ".html",
+    //        html
+    //    );
+    //
+    //    cb();
+    //});
 });
 
 function processSnippets() {
@@ -175,26 +177,20 @@ function renderTemplates() {
     return through.obj(function(snippets, enc, cb) {
         gutil.log("Rendering...");
 
-        var self = this,
-            hbs = handlebars.create({
-                minimize:    false,
-                extname:     '.hbs',
-                partialsDir: __dirname + '/templates/partials'
-            });
+        var partialDir = 'templates/partials/';
 
-        hbs.engine('templates/index.hbs', snippets, function(err, html) {
-            if (err) {
-                self.emit('error', new gutil.PluginError('gulp-pattern-library', 'Could not render template: ' + err));
-                return cb();
-            }
+        handlebars.registerPartial("_content", fs.readFileSync(partialDir + '_content.hbs').toString());
+        handlebars.registerPartial("_item", fs.readFileSync(partialDir + '_item.hbs').toString());
+        handlebars.registerPartial("_toc", fs.readFileSync(partialDir + '_toc.hbs').toString());
 
-            self.push(new File({
-                path:     "index.html",
-                contents: new Buffer(html)
-            }));
+        var tmpl = handlebars.compile(fs.readFileSync('templates/index.hbs').toString(), { preventIndent: true });
 
-            cb();
-        });
+        this.push(new File({
+            path: "index.html",
+            contents: new Buffer(tmpl(snippets))
+        }));
+
+        cb();
     });
 
 }

@@ -16,7 +16,6 @@
     <link href="app.css" rel="stylesheet"/>
     <link href="css/patterns.css" rel="stylesheet"/>
     <link href="css/patterns-custom.css" rel="stylesheet"/>
-    <link href="css/prism.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -37,7 +36,7 @@
 {{#if atoms}}
     <div class="container patterns" id="atoms">
         <div class="row">
-            <div class="col-md-9 col-md-offset-3"><h1 class="patterns-title">Atoms</h1></div>
+            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Atoms</h1></div>
         </div>
         {{#with atoms}}
             {{> _content }}
@@ -48,7 +47,7 @@
 {{#if molecules}}
     <div class="container patterns" id="molecules">
         <div class="row">
-            <div class="col-md-9 col-md-offset-3"><h1 class="patterns-title">Molecules</h1></div>
+            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Molecules</h1></div>
         </div>
         {{#with molecules}}
             {{> _content }}
@@ -59,7 +58,7 @@
 {{#if organisms}}
     <div class="container patterns" id="organisms">
         <div class="row">
-            <div class="col-md-9 col-md-offset-3"><h1 class="patterns-title">Organisms</h1></div>
+            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Organisms</h1></div>
         </div>
         {{#with organisms}}
             {{> _content }}
@@ -70,7 +69,7 @@
 {{#if templates}}
     <div class="container patterns" id="templates">
         <div class="row">
-            <div class="col-md-9 col-md-offset-3">
+            <div class="col-md-9 offset-md-3">
                 <h1 class="patterns-title">Templates</h1>
                 <ul>
                     {{#each templates.items}}
@@ -84,8 +83,6 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/prism.js"></script>
-<script src="js/prism-normalize-whitespace.min.js"></script>
 
 </body>
 </html>
