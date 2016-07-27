@@ -4,6 +4,13 @@ ACT.md's web pattern library, building on [Bootstrap 4](http://v4-alpha.getboots
 
 ## quickstart
 
+### Install gulp and npm dependencies
+
+```
+$ npm install --global gulp-cli
+$ npm install
+```
+
 ### Generate the library and view it
 
 ```
