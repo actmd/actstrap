@@ -1,0 +1,6 @@
+.filter-controls,
+.calendar-selector,
+.list-group.discussion,
+.card-stat {
+    max-width: 300px;
+}

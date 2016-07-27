@@ -1,0 +1,35 @@
+.table-profile {
+  h1 {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  th {
+    width: 125px;
+  }
+
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  td:last-child {
+    text-align: right;
+  }
+
+  tr.big {
+    > * {
+      vertical-align: middle;
+    }
+
+    td:first-child {
+      text-align: center;
+    }
+  }
+
+  .profile-image {
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,32 @@
+
+
+.list-group.filter-controls {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+
+  .list-group-item {
+    background-color: whitesmoke;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    label[data-toggle="collapse"] {
+      font-weight: 600;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+  }
+
+  .checkbox {
+    margin-bottom: 0.5rem;
+  }
+
+  .checkbox label {
+    margin-bottom: 0;
+  }
+}

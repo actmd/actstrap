@@ -1,0 +1,8 @@
+.table-controls-suffix tbody td:last-child {
+  text-align: right;
+  white-space: nowrap;
+
+  a + a {
+    margin-left: 0.25rem;
+  }
+}

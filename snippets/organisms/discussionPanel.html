@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Discussion Panel</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="A single Google-Docs-style discussion thread." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/app.css" />
+
+    <style>
+        body {
+            padding: 3rem;
+        }
+        .list-group {
+            max-width: 400px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="list-group discussion">
+    <div class="list-group-item">
+        <div class="discussion-person">
+            <img src="http://placekitten.com/100/100" class="img-circle">
+            <div class="text-minor">
+                Andrea Albee, MD
+                <div class="text-muted">3:02PM today</div>
+            </div>
+            <button class="btn btn-sm btn-success-outline btn-resolve">Resolve</button>
+        </div>
+
+        <div class="comment">I think this version looks good. <a href="javascript:void(0);">@Brady_Doverspike</a> Are there any other recommendations to include?</div>
+    </div>
+    <div class="list-group-item discussion-reply">
+        <div class="discussion-person">
+            <img src="http://placekitten.com/105/105" class="img-circle">
+            <div class="text-minor">
+                Brady Doverspike, RN
+                <div class="text-muted">3:42PM today</div>
+            </div>
+        </div>
+
+        <div class="comment">I have a couple more tasks to add, and then I think it's perfect.</div>
+    </div>
+    <div class="list-group-item">
+        <input type="text" class="form-control form-control-sm" placeholder="Reply...">
+    </div>
+</div>
+
+</body>
+</html>

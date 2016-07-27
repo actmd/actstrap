@@ -1,0 +1,13 @@
+.table-people td {
+  vertical-align: middle;
+}
+
+.table-people td:first-child {
+  width: 40px;
+  padding-right: 0;
+}
+
+.table-people td:first-child img {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,29 @@
+.patterns-toc .list-group {
+    margin-bottom: 1rem;
+}
+
+h1.patterns-title {
+    margin-bottom: 1rem;
+}
+
+.patterns section.patterns-pattern > h2 {
+    font-weight: 300;
+    font-size: 18pt;
+}
+
+.patterns section.patterns-pattern > p {
+    font-weight: 300;
+}
+
+.patterns {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+.patterns section.patterns-pattern {
+    margin-bottom: 3rem;
+}
+
+.patterns section.patterns-pattern > .example > :last-child {
+    margin-bottom: 0;
+}

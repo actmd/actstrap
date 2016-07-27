@@ -1,0 +1,36 @@
+{
+  "name": "act-patterns",
+  "version": "1.0.0",
+  "description": "ACT.md UI Pattern Library",
+  "scripts": {
+    "http": "php -S localhost:9000",
+    "deploy": "rsync -ptcrzl --delete . ubuntu@XX.XX.XX.XX:/actmd/act-webapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actmd/act-patterns.git"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Jonathan Abbett <jonathan@act.md>",
+  "bugs": {
+    "url": "https://github.com/actmd/act-patterns/issues"
+  },
+  "homepage": "http://patterns.act.md",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "jquery.2": "^1.0.0",
+    "prismjs": "^1.5.1",
+    "selectize": "0.12.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "html-to-json": "^0.6.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "node-handlebars": "^0.9.7",
+    "path": "^0.12.7"
+  }
+}

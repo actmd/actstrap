@@ -1,0 +1,14 @@
+.table.calendar-selector {
+  tbody th, tbody td, th.control {
+    text-align: center;
+  }
+
+  tr.selected td {
+    background-color: rgba(119, 164, 216, 0.2);
+  }
+
+  tbody tr:hover td {
+    background-color: rgba(119, 164, 216, 0.1);
+    cursor: pointer;
+  }
+}

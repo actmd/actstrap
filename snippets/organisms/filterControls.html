@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search filter Controls</title>
+    <meta name="description" content="For rendering static or dynamic facet controls." />
+</head>
+<body>
+
+<form class="list-group filter-controls">
+    <div class="list-group-item">
+        <label data-toggle="collapse" data-target=".keyword"><i class="zmdi zmdi-caret-down"></i> Keyword</label>
+        <div class="collapse in keyword">
+            <input type="text" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="list-group-item">
+        <label data-toggle="collapse" data-target=".receivers"><i class="zmdi zmdi-caret-down"></i> Participants</label>
+        <div class="collapse in receivers">
+            <div class="checkbox">
+                <label><input type="checkbox" value="" checked="checked" /> Me <small class="text-muted">(106)</small></label>
+            </div>
+            <input type="text" class="form-control form-control-sm" placeholder="Other..." />
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

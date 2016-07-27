@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Stat Card</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="A single, colorful statistic, optionally with trend line. Use the standard Bootstrap card background classes to customize." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/app.css" />
+
+</head>
+<body>
+
+<div class="card card-stat card-success card-inverse">
+    <div class="card-block">
+        <h5 class="card-title">
+            <i class="zmdi zmdi-mood"></i> patients helped
+        </h5>
+        <h2 class="card-text">17</h2>
+    </div>
+</div>
+
+<div class="card card-stat card-primary card-inverse">
+    <div class="card-block">
+        <h5 class="card-title"><i class="zmdi zmdi-check"></i> tasks completed</h5>
+
+        <h2 class="card-text">6
+            <small>of 12</small>
+        </h2>
+    </div>
+    <div class="card-stat-chart">
+        <!-- Use Chart.js to initialize your trendline. -->
+        <canvas id="trendline" height="70"></canvas>
+    </div>
+</div>
+
+
+</body>
+</html>
