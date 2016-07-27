@@ -23,9 +23,9 @@ $ gulp watch
 $ gulp new-snippet --type=molecules --name=fooBarBaz
 ```
 
-* Creates `scss/molecules/_fooBarBaz.scss`
+* Creates empty `scss/molecules/_fooBarBaz.scss`
 * Adds import for above to `style.scss`
-* Creates `snippets/molecules/fooBarBaz.html` with starter code
+* Creates `snippets/molecules/fooBarBaz.html` with starter code (containing instructions)
 
 Options for `--type` include:
 
