@@ -25,11 +25,15 @@ $font-family-sans-serif: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, 0.4);
 }
 
-/* Labels within a list-group-item need their positioning tweaked just a bit. */
-.list-group-item .label.pull-xs-right {
-  margin-top: 3px;
+/* When we use a fixed-width icon in a list group item, add some margin, so we don't need to use spaces. */
+.list-group-item > .zmdi-hc-fw {
+  margin-right: 0.5rem;
 }
 
+/* Labels within a list-group-item need their positioning tweaked just a bit. */
+.list-group-item .tag.pull-xs-right {
+  margin-top: 3px;
+}
 
 @import "atoms/textMinor";
 @import "atoms/skinnyHeader";

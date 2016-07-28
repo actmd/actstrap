@@ -24,6 +24,11 @@ h1.patterns-title {
     margin-bottom: 3rem;
 }
 
-.patterns section.patterns-pattern > .example > :last-child {
+.patterns section.patterns-pattern > .patterns-example > :last-child {
     margin-bottom: 0;
+}
+
+.patterns section.patterns-pattern > .patterns-code {
+    background-color: #eee;
+    padding: 1em;
 }
