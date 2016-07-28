@@ -55,9 +55,7 @@ gulp.task('default', ['build']);
  */
 
 var gutil = require('gulp-util');
-//var handlebars = require('node-handlebars');
 var handlebars = require('handlebars');
-var registrar = require('handlebars-registrar');
 var through = require('through2');
 var path = require('path');
 var htmlToJson = require('html-to-json');
