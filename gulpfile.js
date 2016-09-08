@@ -10,7 +10,7 @@ gulp.task('build-css', function() {
                 './node_modules/selectize/dist/less'
             ]
         }).on('error', sass.logError))
-        .pipe(concat('app.css'))
+        .pipe(concat('actstrap.css'))
         .pipe(gulp.dest('./out'));
 });
 
@@ -95,23 +95,11 @@ gulp.task('new-snippet', function(cb) {
     );
 
     // New snippet html
-    //var hbs = handlebars.create({
-    //    minimize:    false,
-    //    extname:     '.hbs'
-    //});
-    //
-    //hbs.engine('templates/snippet.hbs', { name: options['name'] }, function(err, html) {
-    //    if (err) {
-    //        throw new gutil.PluginError('gulp-pattern-library', 'Could not render snippet: ' + err);
-    //    }
-    //
-    //    fs.writeFileSync(
-    //        htmlDir + "/" + options['name'] + ".html",
-    //        html
-    //    );
-    //
-    //    cb();
-    //});
+    var tmpl = handlebars.compile(fs.readFileSync('templates/snippet.hbs').toString());
+
+    fs.writeFileSync(htmlDir + "/" + options['name'] + ".html", tmpl({ name: options['name'] }));
+
+    cb();
 });
 
 function processSnippets() {

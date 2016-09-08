@@ -4,3 +4,22 @@
 .card-stat {
     max-width: 300px;
 }
+
+.patterns section.patterns-pattern > .patterns-example > .dropdown > [data-toggle="dropdown"] {
+    float: left;
+}
+
+.patterns section.patterns-pattern > .patterns-example > .dropdown > .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: .25rem;
+    clear: left;
+}
+
+.application-notice {
+  display: block !important;
+}
+
+.patterns section.patterns-pattern > .patterns-example > .task-btn-group {
+    margin-bottom:1rem;
+}

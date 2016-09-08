@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Primary Navigation</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="Styling unique to our logo, notifications dropdown, and profile dropdown." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-full navbar-dark bg-inverse navbar-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img class="logo" src="actmd_no-text_72dpi.png" alt="ACT.md" title="ACT.md">
+        </a>
+        <div class="primary-navigation-container"><div>
+
+                <div class="nav navbar-nav">
+                    <a data-section="inboxActs" href="index.php" class="nav-item nav-link">Dashboard</a>
+                    <a data-section="inboxActs" href="tasks.php" class="nav-item nav-link">Tasks</a>
+                    <a data-section="inboxActs" href="calendar.php" class="nav-item nav-link">Calendar</a>
+                    <a data-section="patients" href="javascript:void(0);" class="nav-item nav-link">Patients</a>
+                    <a href="new-plan.php" class="nav-item nav-link"><i class="zmdi zmdi-plus-circle"></i></a>
+                    <a data-section="providers" href="javascript:void(0);" class="nav-item nav-link">Library</a>
+                </div>
+
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item">
+                        <form class="form-inline">
+                            <input type="text" class="form-control search" placeholder="Search anything...">
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown" id="notifier"><a class="nav-link dropdown-toggle hide" href="javascript:void(0);" id="notifier-dropdown" data-toggle="dropdown">
+                            <i class="zmdi zmdi-notifications"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifier-dropdown">
+
+                            <div class="dropdown-item"><em>No new notifications since you last checked.</em></div>
+
+                            <div class="dropdown-divider"></div>
+                            <a href="/my/notifications" class="dropdown-item">See older</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="nav-user-dropdown" data-toggle="dropdown">
+                            <img src="http://placekitten.com/100/100" class="img-circle" alt="USER's NAME">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-user-dropdown">
+                            <a href="profile.php" class="dropdown-item"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Profile</a>
+                            <a href="organization.php" class="dropdown-item"><i class="zmdi zmdi-hospital zmdi-hc-fw"></i> Organization</a>
+                            <a href="help.php" class="dropdown-item"><i class="zmdi zmdi-help zmdi-hc-fw"></i> Help</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item logout"><i class="fa fa-sign-out"></i> Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div></div>
+    </div>
+</nav>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>

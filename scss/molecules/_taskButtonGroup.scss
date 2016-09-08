@@ -1,0 +1,17 @@
+/* taskButtonGroup */
+
+.task-btn-group {
+  > .btn:first-child {
+    width:30px;
+  }
+
+  > .btn-outline-danger + .btn {
+    border-left-color: #d9534f;
+  }
+
+  // Our dropdown doesn't have any text, so the toggle caret doesn't need extra margin.
+  .dropdown-toggle::after {
+    margin-left: 0;
+  }
+}
+

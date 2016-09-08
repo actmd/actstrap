@@ -1,0 +1,15 @@
+/* smallDropdownMenu */
+
+.dropdown-menu-sm {
+  min-width: 110px;
+  font-size: 85%;
+
+  .dropdown-item {
+    padding: 3px 15px;
+  }
+
+  // If we're prefixing items with fixed-width icons, adjust the spacing a bit.
+  .dropdown-item .zmdi-hc-fw:first-child {
+    margin-left: -3px;
+  }
+}

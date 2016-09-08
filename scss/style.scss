@@ -3,7 +3,7 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 @import "bootstrap";
 
 /* In our font, the small label text needs to be a bit lighter. */
-.label {
+.tag {
   font-weight: 300;
 }
 
@@ -42,17 +42,23 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 @import "molecules/tableIconPrefix";
 @import "molecules/calendarSelector";
 @import "molecules/patientCard";
+@import "molecules/unborderedButtonGroup";
+@import "molecules/tableControlsSuffix";
+@import "molecules/dropdownWithDetails";
+@import "organisms/discussionPanel";
+@import "molecules/statCard";
 
 @import "organisms/tableEvents";
 @import "organisms/filterControls";
 @import "organisms/tablePeople";
 @import "organisms/tableProfile";
-
-@import "molecules/unborderedButtonGroup";
-@import "molecules/tableControlsSuffix";
-@import "molecules/dropdownWithDetails";
-@import "organisms/discussionPanel";
-@import "molecules/navbarPlan";
-
-@import "molecules/statCard";
 @import "organisms/listGroupMenu";
+@import "organisms/tableTasks";
+
+@import "molecules/smallDropdownMenu";
+
+@import "molecules/primaryNav";
+@import "atoms/applicationNotice";
+@import "atoms/tagMuted";
+@import "molecules/personSelector";
+@import "molecules/taskButtonGroup";

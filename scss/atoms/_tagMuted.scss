@@ -1,0 +1,10 @@
+/* tagMuted */
+
+.tag-muted {
+  background-color: #bbb;
+}
+
+.tag-muted[href]:focus,
+.tag-muted[href]:hover {
+  background-color: #ccc;
+}

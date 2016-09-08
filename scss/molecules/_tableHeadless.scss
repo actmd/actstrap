@@ -1,3 +1,5 @@
-.table-headless tr:first-child td {
-  border-top: none;
+.table-headless tbody tr:first-child {
+  td, th {
+    border-top: none;
+  }
 }

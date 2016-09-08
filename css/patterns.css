@@ -31,4 +31,5 @@ h1.patterns-title {
 .patterns section.patterns-pattern > .patterns-code {
     background-color: #eee;
     padding: 1em;
+    max-height:800px;
 }
