@@ -9,6 +9,14 @@
     border-left-color: #d9534f;
   }
 
+  > .btn-outline-success {
+    font-weight: bold;
+  }
+
+  > .btn-outline-success + .btn {
+    border-left-color: #5cb85c;
+  }
+
   // Our dropdown doesn't have any text, so the toggle caret doesn't need extra margin.
   .dropdown-toggle::after {
     margin-left: 0;
