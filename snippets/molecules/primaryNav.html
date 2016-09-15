@@ -15,53 +15,78 @@
 </head>
 <body>
 
-<nav class="navbar navbar-full navbar-dark bg-inverse navbar-primary">
+<nav class="navbar navbar-primary navbar-full navbar-dark bg-inverse">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand hidden-sm-down" href="/">
             <img class="logo" src="actmd_no-text_72dpi.png" alt="ACT.md" title="ACT.md">
         </a>
-        <div class="primary-navigation-container"><div>
 
-                <div class="nav navbar-nav">
-                    <a data-section="inboxActs" href="index.php" class="nav-item nav-link">Dashboard</a>
-                    <a data-section="inboxActs" href="tasks.php" class="nav-item nav-link">Tasks</a>
-                    <a data-section="inboxActs" href="calendar.php" class="nav-item nav-link">Calendar</a>
-                    <a data-section="patients" href="javascript:void(0);" class="nav-item nav-link">Patients</a>
-                    <a href="new-plan.php" class="nav-item nav-link"><i class="zmdi zmdi-plus-circle"></i></a>
-                    <a data-section="providers" href="javascript:void(0);" class="nav-item nav-link">Library</a>
+        <div class="nav navbar-nav">
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-home hidden-lg-up"></i>
+                <span class="hidden-md-down">Home</span>
+            </a>
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-check hidden-lg-up"></i>
+                <span class="hidden-md-down">Tasks</span>
+            </a>
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-calendar hidden-lg-up"></i>
+                <span class="hidden-md-down">Calendar</span>
+            </a>
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-accounts hidden-lg-up"></i>
+                <span class="hidden-md-down">Patients</span>
+            </a>
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-folder hidden-lg-up"></i>
+                <span class="hidden-md-down">Projects</span>
+            </a>
+            <a href="javascript:void(0);" class="nav-item nav-link">
+                <i class="zmdi zmdi-collection-text hidden-lg-up"></i>
+                <span class="hidden-md-down">Library</span>
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav pull-xs-right">
+            <li class="nav-item">
+                <form class="form-inline hidden-sm-down">
+                    <input type="text" class="form-control search" placeholder="Search...">
+                </form>
+                <a href="javascript:void(0);" class="nav-link hidden-md-up">
+                    <i class="zmdi zmdi-search"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link">
+                    <i class="zmdi zmdi-comment-alt"></i>
+                    <span class="tag tag-pill tag-danger">2</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <span class="tag tag-pill tag-danger">5</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="nav-user-dropdown" data-toggle="dropdown">
+                    <img src="http://placekitten.com/50/50" class="img-circle" alt="USER'S NAME">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-user-dropdown">
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Profile</a>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-lock zmdi-hc-fw"></i> Account</a>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-help zmdi-hc-fw"></i> Help</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-hospital zmdi-hc-fw"></i> Baystate Medical Center</a>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-hospital zmdi-hc-fw"></i> Boston Medical Center</a>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-hospital zmdi-hc-fw"></i> Spaulding Hospital Cambridge</a>
+                    <a href="javascript:void(0);" class="dropdown-item"><i class="zmdi zmdi-more zmdi-hc-fw"></i> <em>3 other organizations</em></a>
+                    <div class="dropdown-divider"></div>
+                    <a href="javascript:void(0);" class="dropdown-item logout"><i class="zmdi zmdi-sign-in zmdi-hc-fw"></i> Log out</a>
                 </div>
-
-                <ul class="nav navbar-nav pull-xs-right">
-                    <li class="nav-item">
-                        <form class="form-inline">
-                            <input type="text" class="form-control search" placeholder="Search anything...">
-                        </form>
-                    </li>
-                    <li class="nav-item dropdown" id="notifier"><a class="nav-link dropdown-toggle hide" href="javascript:void(0);" id="notifier-dropdown" data-toggle="dropdown">
-                            <i class="zmdi zmdi-notifications"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifier-dropdown">
-
-                            <div class="dropdown-item"><em>No new notifications since you last checked.</em></div>
-
-                            <div class="dropdown-divider"></div>
-                            <a href="/my/notifications" class="dropdown-item">See older</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="nav-user-dropdown" data-toggle="dropdown">
-                            <img src="http://placekitten.com/100/100" class="img-circle" alt="USER's NAME">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-user-dropdown">
-                            <a href="profile.php" class="dropdown-item"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Profile</a>
-                            <a href="organization.php" class="dropdown-item"><i class="zmdi zmdi-hospital zmdi-hc-fw"></i> Organization</a>
-                            <a href="help.php" class="dropdown-item"><i class="zmdi zmdi-help zmdi-hc-fw"></i> Help</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="javascript:void(0);" class="dropdown-item logout"><i class="fa fa-sign-out"></i> Log out</a>
-                        </div>
-                    </li>
-                </ul>
-            </div></div>
+            </li>
+        </ul>
     </div>
 </nav>
 

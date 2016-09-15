@@ -1,10 +1,23 @@
+/*
+**  Set Bootstrap variable overrides here, before importing bootstrap.
+*/
+
 $font-family-sans-serif: 'Roboto', sans-serif;
+$input-padding-y-lg: 0.75rem; // Bootstrap's default padding for large inputs seemed way off.
+$input-padding-x-lg: 0.75rem;
 
 @import "bootstrap";
 
-/* In our font, the small label text needs to be a bit lighter. */
+
 .tag {
+  /* In our font, the small label text needs to be a bit lighter. */
   font-weight: 300;
+  /* By Bootstrap's default, tags don't seem to align with nearby text quite right */
+  vertical-align: 1px;
+}
+
+.list-group {
+  margin-bottom: 1rem;
 }
 
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
@@ -25,6 +38,11 @@ $font-family-sans-serif: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, 0.4);
 }
 
+/* When .text-muted (normally gray) is used in an .active .list-group-item (blue background) make a little color adjustment. */
+.list-group-item.active .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
 /* When we use a fixed-width icon in a list group item, add some margin, so we don't need to use spaces. */
 .list-group-item > .zmdi-hc-fw {
   margin-right: 0.5rem;
@@ -35,6 +53,20 @@ $font-family-sans-serif: 'Roboto', sans-serif;
   margin-top: 3px;
 }
 
+/* Links within alert elements look better when they inherit their color from the container.
+(Since we're not using blue, we fall back on underline to indicate clickability.) */
+.alert a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* When full-width `form-control`s are next to each other, there needs to be some spacing. */
+.form-control + .form-control {
+  margin-top:0.5rem;
+}
+
+@import "atoms/applicationNotice";
+@import "atoms/tagMuted";
 @import "atoms/textMinor";
 @import "atoms/skinnyHeader";
 
@@ -45,20 +77,24 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 @import "molecules/unborderedButtonGroup";
 @import "molecules/tableControlsSuffix";
 @import "molecules/dropdownWithDetails";
-@import "organisms/discussionPanel";
+@import "molecules/smallDropdownMenu";
+@import "molecules/primaryNav";
 @import "molecules/statCard";
+@import "molecules/personSelector";
+@import "molecules/taskButtonGroup";
+@import "molecules/smallListGroup";
+@import "molecules/primaryNavMobile";
+@import "molecules/navbarMobileSearch";
 
+@import "organisms/discussionPanel";
 @import "organisms/tableEvents";
 @import "organisms/filterControls";
 @import "organisms/tablePeople";
 @import "organisms/tableProfile";
 @import "organisms/listGroupMenu";
 @import "organisms/tableTasks";
+@import "organisms/discussionPanelCompact";
 
-@import "molecules/smallDropdownMenu";
+@import "atoms/userPresenceIndicator";
 
-@import "molecules/primaryNav";
-@import "atoms/applicationNotice";
-@import "atoms/tagMuted";
-@import "molecules/personSelector";
-@import "molecules/taskButtonGroup";
+@import "atoms/tagClear";

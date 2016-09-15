@@ -3,10 +3,10 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Application Notice</title>
+    <title>Mobile Search Navbar</title>
 
     <!-- Add your description in the `content` attribute -->
-    <meta name="description" content="Fixed to the top of the page, used by Rails to display success messages or error messages." />
+    <meta name="description" content="Fixed to the top of the mobile interface is a dedicated search bar." />
 
     <!-- Just for convenience, we link to the generated stylesheet,
     so you can view your snippet individually as you work on it. -->
@@ -15,9 +15,15 @@
 </head>
 <body>
 
-<div class="application-notice alert alert-success">You did something magnificent!</div>
+<!-- In the wild, add classes 'navbar-fixed-top hidden-sm-up' -->
+<nav class="navbar navbar-dark bg-inverse navbar-mobile-search">
+    <div class="nav navbar-nav">
+        <form class="nav-item form-inline">
+            <input type="text" class="form-control search" placeholder="Search..." />
+        </form>
+    </div>
+</nav>
 
-<div class="application-notice alert alert-danger">You did something terrible!</div>
 
 </body>
 </html>

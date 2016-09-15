@@ -1,0 +1,29 @@
+.discussion-compact {
+  .list-group-item:first-child {
+    cursor: pointer;
+  }
+
+  .list-group-item:first-child:hover {
+    background-color: whitesmoke;
+  }
+}
+
+.discussion-participants {
+  margin-top:-1px;
+
+  .zmdi-lock {
+    font-size:1.25em;
+    vertical-align: -3px;
+    margin-right:0.25rem;
+    color: #990000;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.discussion-resolved .list-group-item {
+  background-color: #eee;
+}

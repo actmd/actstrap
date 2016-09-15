@@ -5,14 +5,20 @@
     height: 29px;
   }
 
-  .nav-link .img-circle {
-    width: 21px;
-    height: 21px;
+  .nav-link {
+    > .zmdi {
+      font-size: 21px;
+      vertical-align: -2px;
+    }
+
+    .img-circle {
+      width: 21px;
+      height: 21px;
+    }
   }
 
-  .zmdi-notifications {
-    font-size: 21px;
-    vertical-align: -2px;
+  .tag {
+    padding-top:0.15em;
   }
 
 }
