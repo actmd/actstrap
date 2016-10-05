@@ -8,4 +8,26 @@
   .card-block :last-child {
     margin-bottom: 0;
   }
+
+  .card-footer {
+    text-align: center;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      .table-icon-prefix td:first-child {
+        padding-left: 0;
+      }
+    }
+  }
 }

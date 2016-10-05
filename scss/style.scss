@@ -23,6 +23,21 @@ body {
   margin-bottom: 1rem;
 }
 
+.card > .list-group {
+  &:first-child .list-group-item:first-of-type {
+    border-top: 0;
+  }
+
+  &:last-child .list-group-item:last-of-type {
+    border-bottom: 0;
+  }
+
+  > .list-group-item {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
 .card-block > :last-child,
 .list-group-item > :last-child,
