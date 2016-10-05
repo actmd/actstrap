@@ -1,0 +1,11 @@
+/* sectionCard */
+
+.card-section {
+  .card-title {
+    font-weight: 300;
+  }
+
+  .card-block :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -8,6 +8,9 @@ $input-padding-x-lg: 0.75rem;
 
 @import "bootstrap";
 
+body {
+  font-weight: 200;
+}
 
 .tag {
   /* In our font, the small label text needs to be a bit lighter. */
@@ -98,3 +101,7 @@ $input-padding-x-lg: 0.75rem;
 @import "atoms/userPresenceIndicator";
 
 @import "atoms/tagClear";
+
+@import "organisms/sectionCard";
+
+@import "organisms/tableActivities";

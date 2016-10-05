@@ -1,0 +1,19 @@
+/* tableActivities */
+
+.table-activities {
+  .activity-summary {
+    margin-top:0.25rem;
+  }
+
+  .activity-previous {
+    text-decoration: line-through;
+  }
+
+  .activity-person {
+    color: inherit;
+  }
+
+  .last-viewed {
+    border-top-color:#999;
+  }
+}

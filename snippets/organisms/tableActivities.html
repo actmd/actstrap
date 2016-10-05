@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Table: Activities</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="In which we summarize an object's history of modifications." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+
+    <style>
+        body {
+            padding:3rem;
+        }
+
+        .table {
+            max-width: 60rem;
+        }
+    </style>
+
+</head>
+<body>
+
+<table class="table table-icon-prefix table-activities">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Event</th>
+        <th></th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><i class="zmdi zmdi-edit"></i></td>
+        <td><a href="javascript:void(0);" class="activity-person">Andrea Albee</a> edited this section's content.</td>
+        <td><a href="javascript:void(0);">Compare</a></td>
+        <td>3 hours ago</td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-check"></i></td>
+        <td>
+            <a href="javascript:void(0);" class="activity-person">Andrea Albee</a> edited a task's description.
+            <div class="activity-summary text-muted text-minor"><a href="javascript:void(0);">Fill insulin prescription</a></div>
+            <div class="activity-summary activity-previous text-muted text-minor">your local pharmacy</div>
+            <div class="activity-summary text-muted text-minor">your pharmacy at 1301 Beacon Street</div>
+        </td>
+        <td><a href="javascript:void(0);">View</a></td>
+        <td>3 hours ago</td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-check"></i></td>
+        <td>
+            <a href="javascript:void(0);" class="activity-person">Andrea Albee</a> created a task.
+            <div class="activity-summary text-muted text-minor"><a href="javascript:void(0);">Fill insulin prescription</a></div>
+        </td>
+        <td><a href="javascript:void(0);">View</a></td>
+        <td>3 hours ago</td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-calendar"></i></td>
+        <td>
+            <a href="javascript:void(0);" class="activity-person">Andrea Albee</a> created an event.
+            <div class="activity-summary text-muted text-minor"><a href="javascript:void(0);">Diabetes education class</a></div>
+        </td>
+        <td><a href="javascript:void(0);">View</a></td>
+        <td>3 hours ago</td>
+    </tr>
+    </tbody>
+    <tbody class="last-viewed">
+    <tr>
+        <td><i class="zmdi zmdi-eye"></i></td>
+        <td><em>You last viewed this section.</em></td>
+        <td></td>
+        <td>Yesterday</td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-comment-outline"></i></td>
+        <td>
+            <a href="javascript:void(0);" class="activity-person">Brady Doverspike</a> responded to a discussion.
+            <div class="activity-summary text-muted text-minor"><a href="javascript:void(0);">Yes, Donna Perkins is expecting you, and we've&hellip;</a></div>
+        </td>
+        <td><a href="javascript:void(0);">View</a></td>
+        <td>Yesterday</td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-comment"></i></td>
+        <td>
+            <a href="javascript:void(0);" class="activity-person">Elizabeth Goncalves-Dias</a> started a new discussion.
+            <div class="activity-summary text-muted text-minor"><a href="javascript:void(0);">Thank you for the food pantry flyer. Is there a&hellip;</a></div>
+        </td>
+        <td><a href="javascript:void(0);">View</a></td>
+        <td>Yesterday</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>
