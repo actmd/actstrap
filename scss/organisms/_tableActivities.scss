@@ -16,4 +16,12 @@
   .last-viewed {
     border-top-color:#999;
   }
+
+  ul {
+    padding: 0.5rem 1.5rem;
+  }
+
+  td :last-child {
+    margin-bottom: 0;
+  }
 }
