@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>tableParticipants</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="" />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+
+    <style>
+        body {
+            padding:3rem;
+            max-width: 30rem;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="skinny-header">
+    <h3>New event, no participants yet</h3>
+</div>
+
+<table class="table table-icon-prefix">
+    <thead>
+    <tr>
+        <th></th>
+        <th colspan="2">Participants</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="vertical-align: middle;">
+            <i class="zmdi zmdi-hc-fw zmdi-plus"></i>
+        </td>
+        <td>
+            <a href="javascript:void(0);">Add / edit participants...</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="skinny-header">
+    <h3>New event, participants selected, not saved</h3>
+</div>
+
+<table class="table table-icon-prefix table-controls-suffix">
+    <thead>
+    <tr>
+        <th></th>
+        <th colspan="2">Participants</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="vertical-align: middle;">
+            <i class="zmdi zmdi-hc-fw zmdi-plus"></i>
+        </td>
+        <td colspan="2">
+            <input type="text" class="form-control form-control-sm" placeholder="Add a participant..." />
+        </td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-minus"></i></td>
+        <td><a href="javascript:void(0);">Brady Doverspike</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-minus"></i></td>
+        <td><a href="javascript:void(0);">Donna Perkins</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-minus"></i></td>
+        <td><a href="javascript:void(0);">Rachel Roppolo</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-minus"></i></td>
+        <td><a href="javascript:void(0);">Patrick Schmid</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="skinny-header">
+    <h3>View event, show participants with status</h3>
+</div>
+
+<table class="table table-icon-prefix">
+    <thead>
+    <tr>
+        <th></th>
+        <th colspan="2">Participants</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="vertical-align: middle;">
+            <i class="zmdi zmdi-hc-fw zmdi-plus"></i>
+        </td>
+        <td>
+            <a href="javascript:void(0);">Add / edit participants...</a>
+        </td>
+    </tr>
+    <tr>
+        <td data-toggle="tooltip" title="Brady Doverspike will attend."><i class="zmdi zmdi-hc-fw zmdi-check"></i></td>
+        <td><a href="javascript:void(0);">Brady Doverspike</a></td>
+    </tr>
+    <tr>
+        <td data-toggle="tooltip" title="Donna Perkins will not attend."><i class="zmdi zmdi-hc-fw zmdi-close"></i></td>
+        <td><a href="javascript:void(0);">Donna Perkins</a></td>
+    </tr>
+    <tr>
+        <td data-toggle="tooltip" title="Rachel Roppolo might attend."><i class="zmdi zmdi-hc-fw zmdi-help-outline"></i></td>
+        <td><a href="javascript:void(0);">Rachel Roppolo</a></td>
+    </tr>
+    <tr>
+        <td data-toggle="tooltip" title="Patrick Schmid has not responded."><i class="zmdi zmdi-hc-fw zmdi-minus"></i></td>
+        <td><a href="javascript:void(0);">Patrick Schmid</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="skinny-header">
+    <h3>Edit participants</h3>
+</div>
+
+<table class="table table-icon-prefix table-controls-suffix">
+    <thead>
+    <tr>
+        <th></th>
+        <th colspan="2">Participants</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="vertical-align: middle;">
+            <i class="zmdi zmdi-hc-fw zmdi-plus"></i>
+        </td>
+        <td colspan="2">
+            <input type="text" class="form-control form-control-sm" placeholder="Add a participant..." />
+        </td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-check"></i></td>
+        <td><a href="javascript:void(0);">Brady Doverspike</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-close"></i></td>
+        <td><a href="javascript:void(0);">Donna Perkins</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    <tr>
+        <td><i class="zmdi zmdi-hc-fw zmdi-help-outline"></i></td>
+        <td><a href="javascript:void(0);">Patrick Schmid</a></td>
+        <td><i class="zmdi zmdi-delete"></i></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/tether.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+</script>

@@ -4,28 +4,33 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-}
 
-.skinny-header:before {
-  position: absolute;
-  top: 50%;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #eeeeee;
-}
+  &:before {
+    position: absolute;
+    top: 50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #eeeeee;
+  }
 
-.skinny-header > * {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
-  color: #555555;
-  vertical-align: middle;
-  background-color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 100%;
+  > * {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 100%;
+  }
+
+  + .table {
+    margin-top: 1rem;
+  }
+
 }

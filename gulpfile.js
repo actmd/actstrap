@@ -33,7 +33,8 @@ gulp.task('copy-js', function() {
         'node_modules/jquery.2/node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/prismjs/prism.js',
-        'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'
+        'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js',
+        'node_modules/tether/dist/js/tether.min.js'
     ]).pipe(gulp.dest('./out/js'))
 });
 
