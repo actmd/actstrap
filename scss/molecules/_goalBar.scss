@@ -12,4 +12,9 @@
     vertical-align: 1px;
     margin:0 0.25rem;
   }
+
+  &.achieved {
+    background-color: $state-success-bg;
+    color: $state-success-text;
+  }
 }
