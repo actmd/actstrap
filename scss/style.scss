@@ -87,6 +87,8 @@ body {
 @import "atoms/tagMuted";
 @import "atoms/textMinor";
 @import "atoms/skinnyHeader";
+@import "atoms/userPresenceIndicator";
+@import "atoms/tagClear";
 
 @import "molecules/tableHeadless";
 @import "molecules/tableIconPrefix";
@@ -103,6 +105,8 @@ body {
 @import "molecules/smallListGroup";
 @import "molecules/primaryNavMobile";
 @import "molecules/navbarMobileSearch";
+@import "molecules/goalBar";
+@import "molecules/definitionListGroup";
 
 @import "organisms/discussionPanel";
 @import "organisms/tableEvents";
@@ -112,11 +116,6 @@ body {
 @import "organisms/listGroupMenu";
 @import "organisms/tableTasks";
 @import "organisms/discussionPanelCompact";
-
-@import "atoms/userPresenceIndicator";
-
-@import "atoms/tagClear";
-
+@import "organisms/tableParticipants";
 @import "organisms/sectionCard";
-
 @import "organisms/tableActivities";
