@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Permission Checkbox</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="A custom checkbox to show (and toggle) whether a permission is allowed or prohibited, plus a companion indicator element." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+
+    <style>
+        body {
+            padding: 5rem;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="custom-controls-stacked">
+    <label class="custom-control permission-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Can destroy the entire system</span>
+    </label>
+    <label class="custom-control permission-checkbox">
+        <input type="checkbox" class="custom-control-input" checked="checked">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Can download PHI onto unencrypted disk</span>
+    </label>
+</div>
+
+<table class="table table-icon-prefix table-permissions">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Kind</th>
+        <th><i class="zmdi zmdi-eye"></i></th>
+        <th><i class="zmdi zmdi-delete"></i></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><i class="zmdi zmdi-account"></i></td>
+        <td>Brady Doverspike</td>
+        <td>Family</td>
+        <td><div class="custom-control-indicator permission-indicator allowed"></div></td>
+        <td><div class="custom-control-indicator permission-indicator prohibited"></div></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>
