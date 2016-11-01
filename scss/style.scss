@@ -67,7 +67,7 @@ body {
 }
 
 /* Labels within a list-group-item need their positioning tweaked just a bit. */
-.list-group-item .tag.pull-xs-right {
+.list-group-item .tag.float-xs-right {
   margin-top: 3px;
 }
 
@@ -119,3 +119,5 @@ body {
 @import "organisms/tableParticipants";
 @import "organisms/sectionCard";
 @import "organisms/tableActivities";
+
+@import "atoms/permissionCheckbox";
