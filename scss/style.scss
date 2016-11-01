@@ -89,6 +89,7 @@ body {
 @import "atoms/skinnyHeader";
 @import "atoms/userPresenceIndicator";
 @import "atoms/tagClear";
+@import "atoms/permissionCheckbox";
 
 @import "molecules/tableHeadless";
 @import "molecules/tableIconPrefix";
@@ -107,6 +108,7 @@ body {
 @import "molecules/navbarMobileSearch";
 @import "molecules/goalBar";
 @import "molecules/definitionListGroup";
+@import "molecules/iconCallout";
 
 @import "organisms/discussionPanel";
 @import "organisms/tableEvents";
@@ -119,5 +121,3 @@ body {
 @import "organisms/tableParticipants";
 @import "organisms/sectionCard";
 @import "organisms/tableActivities";
-
-@import "atoms/permissionCheckbox";
