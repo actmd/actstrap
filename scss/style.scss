@@ -55,6 +55,19 @@ body, .tooltip {
   color: white;
 }
 
+.card-inverse {
+  .card-link,
+  .card-text,
+  .card-subtitle,
+  .card-blockquote .blockquote-footer {
+    color: rgba(255, 255, 255, .85);
+  }
+
+  a.card-link {
+    text-decoration: underline;
+  }
+}
+
 /* These links, by default, are too light. */
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.4);
@@ -127,3 +140,5 @@ body, .tooltip {
 @import "organisms/tableActivities";
 
 @import "atoms/personPreview";
+
+@import "molecules/privacyCard";
