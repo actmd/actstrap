@@ -68,6 +68,12 @@ body, .tooltip {
   }
 }
 
+/* Card titles look better when they're lighter */
+.card-title {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
 /* These links, by default, are too light. */
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.4);
@@ -146,3 +152,4 @@ body, .tooltip {
 @import "atoms/cardBlockScroll";
 @import "molecules/shepherdTheme";
 @import "molecules/reapopTheme";
+@import "organisms/objectCard";

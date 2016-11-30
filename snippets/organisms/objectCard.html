@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Object Card</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="Pattern for displaying a single object's details with controls and state." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+
+    <style>
+      /* For easy single-snippet preview. */
+      body {
+        margin: 5rem;
+        max-width: 50rem;
+      }
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-archive"></i> Archive</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-header card-header-archived">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-undo"></i> Unarchive</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-delete"></i> Delete</a>
+    </div>
+    <em>This event has been archived.</em>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-header card-header-deleted">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-undo"></i> Undelete</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-alert-circle"></i> Redact</a>
+    </div>
+    <em>This event has been deleted.</em>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+
+<!--
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-delete"></i> Delete</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-archive"></i> Archive</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-delete"></i> Delete</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-header card-header-archived">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-undo"></i> Unarchive</a>
+    </div>
+    <em>This event has been archived.</em>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-edit" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57/edit"><i class="zmdi zmdi-hc-fw zmdi-edit"></i> Edit</a>
+    </div>
+    <strong><i class="zmdi zmdi-hc-fw zmdi-calendar rounded-circle"></i> Event</strong>
+  </div>
+  <div class="card-header card-header-archived">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-undo"></i> Unarchive</a>
+    </div>
+    <em>This event has been archived.</em>
+  </div>
+  <div class="card-header card-header-deleted">
+    <div class="btn-group btn-group-unbordered float-xs-right">
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-undo"></i> Undelete</a>
+      <a class="btn btn-sm btn-secondary btn-delete" rel="nofollow" data-method="delete" href="/events/32402cc4-0fd5-46b5-8de6-13cebaa83c57"><i class="zmdi zmdi-hc-fw zmdi-alert-circle"></i> Redact</a>
+    </div>
+    <em>This event has been deleted.</em>
+  </div>
+  <div class="card-block">
+    <h2 class="card-title">Appointment with social worker</h2>
+  </div>
+</div>
+-->
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>

@@ -1,0 +1,11 @@
+/* objectCard */
+
+.card-header-archived {
+  color: $state-warning-text;
+  background-color: $state-warning-bg;
+}
+
+.card-header-deleted {
+  color: $state-danger-text;
+  background-color: $state-danger-bg;
+}
