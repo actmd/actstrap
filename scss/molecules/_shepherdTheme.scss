@@ -141,7 +141,7 @@
   border-right-color: #313334; }
 
 .shepherd-element.shepherd-theme-actmd {
-  border-radius: 0;
+  border-radius: 0.3em;
   z-index: 9999;
   max-width: 24em;
   font-size: 1em; }
@@ -157,13 +157,13 @@
 .shepherd-element.shepherd-theme-actmd.shepherd-has-cancel-link .shepherd-content header h3 {
   float: left; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content {
-  border-radius: 0;
+  border-radius: 0.3em;
   padding: 0; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content * {
   font-size: inherit; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content header {
   *zoom: 1;
-  border-radius: 0; }
+  border-radius: 0.3em 0.3em 0 0; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content header:after {
   content: "";
   display: table;
@@ -206,21 +206,26 @@
   margin: 0; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content footer .shepherd-buttons li .shepherd-button {
   display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  border-radius: 0;
   cursor: pointer;
-  border: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
   margin: 0 .5em 0 0;
   font-family: inherit;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-size: .8em;
-  line-height: 1em;
-  padding: .75em 2em;
-  background: #3288e6;
+  background-color: #0275d8;
   color: #fff; }
 .shepherd-element.shepherd-theme-actmd .shepherd-content footer .shepherd-buttons li .shepherd-button.shepherd-button-secondary {
   background: #eee;

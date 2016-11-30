@@ -1,0 +1,316 @@
+@mixin notification-variant($background, $border-color, $icon) {
+  background-color: $background;
+  border-left:      2px solid #{$border-color};
+  color:            #524c4c;
+
+  @if $icon != '' {
+    .notification-icon:before {
+      content: $icon;
+      color:   $border-color;
+    }
+  } @else {
+    .notification-icon {
+      display: none;
+    }
+  }
+}
+
+// Media queries breakpoints
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-xs-max: ($screen-sm-min - 1);
+
+$window-padding: 20px;
+
+// Notification variables
+$notification-max-width: 360px;
+$notification-button-width: 90px;
+$notification-close-button: "\f00d";
+
+$notification-success-bg: #ffffff;
+$notification-success-border: #4dc657;
+$notification-success-icon: "\f058";
+
+$notification-default-bg: #ffffff;
+$notification-default-border: #ffffff;
+
+$notification-info-bg: #ffffff;
+$notification-info-border: #349ef3;
+$notification-info-icon: "\f05a";
+
+$notification-warning-bg: #ffffff;
+$notification-warning-border: #f5aa0a;
+$notification-warning-icon: "\f071";
+
+$notification-error-bg: #ffffff;
+$notification-error-border: #f5311d;
+$notification-error-icon: "\f057";
+
+$notification-loading-bg: #ffffff;
+$notification-loading-border: #349ef3;
+$notification-loading-icon: "\f110";
+
+// NotificationSystem component
+.notifications-system {
+
+}
+
+// NotificationContainer component
+.notifications-container {
+  position: fixed;
+  z-index:  99999;
+}
+
+// for small to large screens, container position and notification animation is
+// different depending on container position
+.notifications-container {
+  // change style of buttons depending of the notification position
+  &--tc,
+  &--tr,
+  &--tl,
+  &--bc,
+  &--br,
+  &--bl {
+    width: $notification-max-width;
+    .notification {
+      &--buttons-1 .notification-button {
+        height: 100%;
+      }
+      &--buttons-2 .notification-button {
+        height: 50%;
+      }
+      &-buttons {
+        width: $notification-button-width;
+
+        .notification-button {
+          display: block;
+          width:   $notification-button-width;
+
+          &:nth-child(2) {
+            border-top: 1px solid rgba(0, 0, 0, 0.09);
+          }
+        }
+      }
+    }
+  }
+  &--b,
+  &--t {
+    .notification {
+      &--buttons-1 {
+        .notification-buttons {
+          width: $notification-button-width;
+        }
+      }
+      &--buttons-2 {
+        .notification-meta {
+          width: calc(100% - #{$notification-button-width} * 2)
+        }
+        .notification-buttons {
+          width: calc(#{$notification-button-width} * 2);
+        }
+      }
+      &-buttons {
+        .notification-button {
+          float:  left;
+          width:  $notification-button-width;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // animations depending of the notification position
+  &--t {
+    width: calc(100% - 40px);
+    top:   20px;
+    left:  20px;
+  }
+  &--tc {
+    top:       20px;
+    left:      50%;
+    transform: translateX(-50%);
+  }
+  &--tr {
+    top:   20px;
+    right: 20px;
+  }
+  &--tl {
+    top:  20px;
+    left: 20px;
+  }
+  &--b {
+    width:  calc(100% - 40px);
+    bottom: 0;
+    left:   20px;
+  }
+  &--bc {
+    bottom:    0;
+    left:      50%;
+    transform: translateX(-50%);
+  }
+  &--br {
+    bottom: 0;
+    right:  20px;
+  }
+  &--bl {
+    bottom: 0;
+    left:   20px;
+  }
+}
+
+// put all notifications at the top of the screen
+@media (max-width: #{$screen-xs-max}) {
+  .notifications-container {
+    &--t {
+      width: 100%;
+      top:   0;
+      left:  0;
+
+
+      .notification-wrapper {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Notification component
+.notification {
+  display:    table;
+  width:      100%;
+  height:     100%;
+  position:   relative;
+  min-height: 40px;
+  border:     none;
+  @include box-shadow(0 1px 3px -1px rgba(0, 0, 0, 0.3));
+  z-index:    999;
+
+  &-wrapper {
+    display:       block;
+    width:         100%;
+    height:        100%;
+    margin-bottom: $window-padding;
+  }
+  &-image-container {
+    display:    table-cell;
+    box-sizing: border-box;
+    padding:    10px 0 10px 15px;
+  }
+  &-image {
+    display:         inline-block;
+    vertical-align:  top;
+    border-radius:   40px;
+    width:           40px;
+    height:          40px;
+    background-size: cover;
+  }
+  &-icon {
+    display:    inline-block;
+    box-sizing: border-box;
+    margin:     10px 0 10px 15px;
+    // override font-size of `fa` class
+    font-size:  20px !important;
+  }
+  &-meta {
+    display:        table-cell;
+    vertical-align: top;
+    box-sizing:     border-box;
+    width:          100%;
+    padding:        10px 20px;
+  }
+  &-close-button-container {
+    display:    table-cell;
+    padding:    10px 15px;
+    box-sizing: border-box;
+
+  }
+  &-close-button {
+    // override font-size of `fa` class
+    font-size: 14px !important;
+    color:     #524c4c;
+    cursor:    pointer;
+
+    &:before {
+      content: $notification-close-button;
+    }
+    &:hover {
+      color: lighten(#524c4c, 10%);
+    }
+  }
+  // global style for buttons
+  &-buttons {
+    display:        table-cell;
+    box-sizing:     border-box;
+    height:         100%;
+    vertical-align: top;
+
+    .notification-button {
+      min-height:  40px;
+      box-sizing:  border-box;
+      padding:     0;
+      background:  none;
+      border:      none;
+      border-left: 1px solid rgba(0, 0, 0, 0.09);
+      outline:     none;
+      text-align:  center;
+      color:       #524c4c;
+      cursor:      pointer;
+
+      &-text {
+        display:       block;
+        height:        25px;
+        // width of a button with 10px of padding
+        width:         70px;
+        white-space:   nowrap;
+        overflow:      hidden;
+        margin:        0 auto;
+        text-overflow: ellipsis;
+        text-align:    center;
+        font-size:     14px;
+        line-height:   25px;
+      }
+      &:hover {
+        color: #349ef3;
+      }
+      &:active {
+        color: darken(#349ef3, 10%);
+      }
+    }
+  }
+  &-title {
+    margin:      0 0 10px;
+    font-size:   15px;
+    font-weight: 700;
+    line-height: 1.428571429;
+  }
+  &-message {
+    margin: 0;
+  }
+  &--dismissible {
+    cursor: pointer;
+  }
+  // color variants
+  &--default {
+    @include notification-variant($notification-default-bg, $notification-default-border, '');
+  }
+  &--success {
+    @include notification-variant($notification-success-bg, $notification-success-border, $notification-success-icon);
+  }
+  &--info {
+    @include notification-variant($notification-info-bg, $notification-info-border, $notification-info-icon);
+  }
+  &--warning {
+    @include notification-variant($notification-warning-bg, $notification-warning-border, $notification-warning-icon);
+  }
+  &--error {
+    @include notification-variant($notification-error-bg, $notification-error-border, $notification-error-icon);
+  }
+  &--loading {
+    // infinite rotating animation
+    .notification-icon {
+      -webkit-animation: rotating 2s infinite linear;
+      animation:         rotating 2s infinite linear;
+    }
+    @include notification-variant($notification-loading-bg, $notification-loading-border, $notification-loading-icon);
+  }
+}
