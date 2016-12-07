@@ -1,11 +1,13 @@
 /* goalBar */
-
-.goal-bar {
+.goal-bar, .privacy-bar {
   padding: $card-spacer-y $card-spacer-x;
   border-top: 1px solid $card-border-color;
   border-bottom: 1px solid $card-border-color;
-  background-color: $state-warning-bg;
   font-weight: 400;
+}
+
+.goal-bar {
+  background-color: $state-warning-bg;
   color: $state-warning-text;
 
   .btn {
