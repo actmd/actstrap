@@ -18,6 +18,13 @@ $ gulp
 $ open out/index.html
 ```
 
+### Generate and copy the new CSS to act-heka
+
+```
+$ gulp
+$ cp out/actstrap.css ../act-heka/vendor/assets/stylesheets/
+```
+
 ### Regenerate the library whenever a stylesheet, snippet, or template changes
 
 ```
