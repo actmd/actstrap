@@ -1,5 +1,5 @@
 /* privacyBar */
-.privacy-bar {
+.restricted-bar {
   background-color: $state-info-bg;
   color: $state-info-text;
 
@@ -10,5 +10,9 @@
   a {
     color: inherit;
     text-decoration: underline;
+  }
+
+  .btn {
+    margin-top:-1px;
   }
 }
