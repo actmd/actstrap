@@ -1,0 +1,14 @@
+/* privacyBar */
+.privacy-bar {
+  background-color: $state-info-bg;
+  color: $state-info-text;
+
+  > .zmdi {
+    margin-right:0.25rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
