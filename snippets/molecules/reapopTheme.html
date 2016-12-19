@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>reapopTheme</title>
+  <title>Reapop Theme</title>
 
   <!-- Add your description in the `content` attribute -->
   <meta name="description" content="" />
@@ -20,6 +20,19 @@
       max-width: 50rem;
       background-color: #eee;
     }
+
+    .notifications-container {
+      position: relative;
+    }
+
+    .notifications-container--tl {
+      top: 0;
+      left: 0;
+    }
+
+    .notification-wrapper {
+      margin-bottom: 0;
+    }
   </style>
 
 </head>
@@ -27,15 +40,13 @@
 
 <!-- Delete this comment and add your example HTML here -->
 <div data-reactroot="" class="notifications-system">
-  <div class="notifications-container notifications-container-tl">
+  <div class="notifications-container notifications-container--tl">
     <div class="notification-wrapper">
-      <div class="notification notification--info notification--dismissible">
-        <span class="hide"></span>
-
+      <div class="notification notification--info notification--dismissible notification--buttons-2">
         <div class="notification-meta">
           <h4 class="notification-title">
-            <i class="zmdi zmdi-hc-fw zmdi-check img-circle" style="color: #dd8b42  "></i>
-            <a class="activity-person" href="/people/ted-quinn">Ted Quinn</a> updated a task
+            <i class="zmdi zmdi-hc-fw zmdi-check img-circle"></i>
+            Ted Quinn updated a task
           </h4>
 
           <p class="notification-message">

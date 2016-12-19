@@ -22,3 +22,16 @@
 .patterns section.patterns-pattern > .patterns-example > .task-btn-group {
     margin-bottom:1rem;
 }
+
+.patterns-example .notifications-container {
+    position: relative;
+}
+
+.patterns-example .notifications-container--tl {
+    top: 0;
+    left: 0;
+}
+
+.patterns-example .notification-wrapper {
+    margin-bottom: 0;
+}
