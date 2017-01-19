@@ -1,0 +1,21 @@
+.table-questions {
+  td.options {
+    white-space: nowrap;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    .form-check {
+      margin-bottom: 0.5rem;
+
+      label {
+        display: block;
+      }
+
+      .form-check-input {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

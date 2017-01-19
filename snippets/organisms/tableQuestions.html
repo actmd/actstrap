@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>tableQuestions</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="" />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,300italic,700italic&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+
+    <style>
+      /* For easy single-snippet preview. */
+      body {
+        margin: 5rem;
+        max-width: 50rem;
+      }
+    </style>
+
+</head>
+<body>
+
+<table class="table table-striped table-questions table-icon-prefix table-headless">
+    <tbody>
+    <tr>
+        <td><i class="zmdi zmdi-help"></i></td>
+        <td class="question">
+            Does he/she lose awareness, become unresponsive, or lose
+            consciousness?
+            <textarea id="annotation" class="form-control mt-1 hide" placeholder="Enter annotation..."></textarea>
+        </td>
+        <td class="options">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios1" value="yes" checked>Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios1" value="no">No
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="exampleRadios1" value="unknown">I don't know
+                </label>
+            </div>
+        </td>
+        <td>
+            <a href="javascript:void(0);" id="toggle-annotation" class="text-muted"><i class="zmdi zmdi-format-subject"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>
