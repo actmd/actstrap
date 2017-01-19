@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Mobile Page Title</title>
+
+    <!-- Add your description in the `content` attribute -->
+    <meta name="description" content="Title bar for mobile views. Page body's top padding is automatically adjusted to accommodate the bar's height." />
+
+    <!-- Just for convenience, we link to the generated stylesheet,
+    so you can view your snippet individually as you work on it. -->
+    <link rel="stylesheet" href="../../out/actstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+
+    <style>
+      /* For easy single-snippet preview. */
+      body {
+        margin: 5rem;
+        max-width: 50rem;
+      }
+    </style>
+
+</head>
+<body>
+
+<!-- In reality, add class `navbar-fixed-top` -->
+<div class="mobile-page-title">
+    <div class="title">
+        Your page title
+    </div>
+</div>
+
+<!-- Include buttons before/after the title. -->
+<div class="mobile-page-title bg-branded text-white">
+    <button class="btn btn-clear"><i class="zmdi zmdi-caret-left"></i> Back</button>
+    <div class="title">
+        <div class="text-minor">Brady Doverspike</div>
+        <strong>Plan</strong>
+    </div>
+    <button class="btn btn-clear"><i class="zmdi zmdi-more"></i></button>
+</div>
+
+</body>
+</html>
+
+<!-- Also for convenience, these are here in case you're enhancing
+an interactive Bootstrap component. -->
+<script src="../../out/js/jquery.min.js"></script>
+<script src="../../out/js/bootstrap.min.js"></script>

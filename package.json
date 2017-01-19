@@ -18,7 +18,7 @@
   },
   "homepage": "http://patterns.act.md",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.3",
+    "bootstrap": "4.0.0-alpha.5",
     "jquery.2": "^1.0.0",
     "selectize": "0.12.1"
   },
