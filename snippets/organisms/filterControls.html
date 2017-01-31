@@ -2,28 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Search filter Controls</title>
-    <meta name="description" content="For rendering static or dynamic facet controls." />
+    <title>Filter controls</title>
+    <meta name="description" content="To provide compact filter controls above a search-powered list." />
 </head>
 <body>
 
-<form class="list-group filter-controls">
-    <div class="list-group-item">
-        <label data-toggle="collapse" data-target=".keyword"><i class="zmdi zmdi-caret-down"></i> Keyword</label>
-        <div class="collapse in keyword">
-            <input type="text" class="form-control form-control-sm" />
+<ul class="list-inline filter-controls">
+    <li class="list-inline-item text-minor">
+        <strong>Filter by</strong>
+    </li>
+
+    <li class="list-inline-item dropdown dropdown-select-search">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Pending</a>
+        <div class="dropdown-menu dropdown-menu-sm">
+            <h6 class="dropdown-header">Progress</h6>
+            <label class="dropdown-option"><input type="radio" name="progress" /> Any</label>
+            <label class="dropdown-option"><input type="radio" name="progress" checked /> Pending</label>
+            <label class="dropdown-option"><input type="radio" name="progress" /> Finshed</label>
         </div>
-    </div>
-    <div class="list-group-item">
-        <label data-toggle="collapse" data-target=".receivers"><i class="zmdi zmdi-caret-down"></i> Participants</label>
-        <div class="collapse in receivers">
-            <div class="checkbox">
-                <label><input type="checkbox" value="" checked="checked" /> Me <small class="text-muted">(106)</small></label>
+    </li>
+
+    <li class="list-inline-item dropdown dropdown-select-search">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">2 tags</a>
+        <div class="dropdown-menu dropdown-menu-sm">
+            <h6 class="dropdown-header">Tags</h6>
+            <label class="dropdown-option"><input type="checkbox" name="tags" checked /> Cool</label>
+            <label class="dropdown-option"><input type="checkbox" name="tags" checked /> Hot</label>
+            <label class="dropdown-option"><input type="checkbox" name="tags" /> Funky</label>
+            <label class="dropdown-option"><input type="checkbox" name="tags" /> Fresh</label>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-input">
+                <input type="text" class="form-control form-control-sm" placeholder="Search..." />
             </div>
-            <input type="text" class="form-control form-control-sm" placeholder="Other..." />
         </div>
-    </div>
-</form>
+    </li>
+
+    <li class="list-inline-item dropdown dropdown-select-search">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Assignee</a>
+        <div class="dropdown-menu dropdown-menu-sm">
+            <h6 class="dropdown-header">Assignee</h6>
+            <label class="dropdown-option"><input type="radio" name="assignee" checked /> Any</label>
+            <label class="dropdown-option"><input type="radio" name="assignee" /> Me</label>
+            <label class="dropdown-option"><input type="radio" name="assignee" /> My groups</label>
+            <label class="dropdown-option"><input type="radio" name="assignee" /> Unassigned</label>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-input">
+                <input type="text" class="form-control form-control-sm" placeholder="Search..." />
+            </div>
+        </div>
+    </li>
+
+    <li class="list-inline-item dropdown dropdown-select-search">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Creator</a>
+        <div class="dropdown-menu dropdown-menu-sm">
+            <h6 class="dropdown-header">Creator</h6>
+            <label class="dropdown-option"><input type="radio" name="creator" checked /> Any</label>
+            <label class="dropdown-option"><input type="radio" name="creator" /> Me</label>
+            <label class="dropdown-option"><input type="radio" name="creator" /> Patient / Family</label>
+            <label class="dropdown-option"><input type="radio" name="creator" /> Other organizations</label>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-input">
+                <input type="text" class="form-control form-control-sm" placeholder="Search..." />
+            </div>
+        </div>
+    </li>
+
+    <li class="list-inline-item dropdown dropdown-select-search">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Due date</a>
+        <div class="dropdown-menu dropdown-menu-sm">
+            <h6 class="dropdown-header">Due date</h6>
+            <label class="dropdown-option"><input type="radio" name="due_date" checked /> Any</label>
+            <label class="dropdown-option"><input type="radio" name="due_date" /> Overdue</label>
+            <label class="dropdown-option"><input type="radio" name="due_date" /> Due today</label>
+            <label class="dropdown-option"><input type="radio" name="due_date" /> Due tomorrow</label>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-input">
+                <input type="text" class="form-control form-control-sm" placeholder="Other date..." />
+            </div>
+        </div>
+    </li>
+</ul>
+
+<div class="jumbotron"> Tasks here... </div>
 
 </body>
 </html>

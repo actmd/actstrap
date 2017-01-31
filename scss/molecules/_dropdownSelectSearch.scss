@@ -1,0 +1,41 @@
+.dropdown-select-search {
+  .dropdown-header {
+    padding: 3px 15px;
+    font-weight: 200;
+    font-size: 9pt;
+  }
+
+  .zmdi-spinner {
+    margin-top: 0.35rem;
+  }
+}
+
+.dropdown-option, .dropdown-input, .dropdown-pagination {
+  display: block;
+  padding: 3px $dropdown-item-padding-x;
+  clear: both;
+  font-weight: normal;
+  color: $dropdown-link-color;
+}
+
+.dropdown-option {
+  margin-bottom: 0;
+  cursor: pointer;
+  white-space: nowrap;
+
+  input[type='checkbox'], input[type='radio'] {
+    vertical-align: 1px;
+    margin-right:3px;
+  }
+}
+
+.dropdown-input {
+  .form-control {
+    min-width: 125px;
+  }
+}
+
+.dropdown-pagination {
+  font-size: 9pt;
+  font-weight: 200;
+}

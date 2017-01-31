@@ -1,7 +1,12 @@
-.filter-controls,
 .calendar-selector,
 .card-stat {
     max-width: 300px;
+}
+
+.dropdown-select-search {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1rem;
 }
 
 .patterns section.patterns-pattern > .patterns-example > .dropdown > [data-toggle="dropdown"] {
@@ -23,7 +28,7 @@
     margin-bottom:1rem;
 }
 
-.patterns-example .notifications-container {
+.patterns-example .notifications-container, .patterns-example .shepherd-step {
     position: relative;
 }
 

@@ -1,32 +1,19 @@
+.filter-controls {
+  border-bottom: 1px dotted #ddd;
+  padding:0.5rem 0;
 
 
-.list-group.filter-controls {
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
 
-  .list-group-item {
-    background-color: whitesmoke;
-
-    :last-child {
-      margin-bottom: 0;
+  li.list-inline-item {
+    &:not(:last-child) {
+      margin-right:1.5rem;
     }
 
-    label[data-toggle="collapse"] {
-      font-weight: 600;
-      display: block;
-      cursor: pointer;
+    > a {
+      color: #666;
+      font-size:85%;
     }
   }
 
-  label {
-    margin-bottom: 0.25rem;
-  }
 
-  .checkbox {
-    margin-bottom: 0.5rem;
-  }
-
-  .checkbox label {
-    margin-bottom: 0;
-  }
 }
