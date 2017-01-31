@@ -1,0 +1,39 @@
+.question {
+  margin-top: 1rem;
+
+  > * {
+    padding-top: 1rem;
+  }
+
+  .question-name {
+    font-weight: 400;
+  }
+
+  .question-actions {
+    margin-top: 0.5rem;
+  }
+
+  .question-options {
+    white-space: nowrap;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    .form-check {
+      margin-bottom: 0.5rem;
+
+      label {
+        display: block;
+      }
+
+      .form-check-input {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  + .question {
+    border-top:1px dotted black;
+  }
+}

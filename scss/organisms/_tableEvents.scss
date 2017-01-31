@@ -1,7 +1,14 @@
-.table-events tbody td:last-child {
-  width: 60%;
-  a {
-    text-decoration: underline;
-    font-weight: 400;
+.table-events {
+  tbody {
+    td:nth-child(2) {
+      white-space: nowrap;
+    }
+    td:last-child {
+      width: 60%;
+      a {
+        text-decoration: underline;
+        font-weight: 400;
+      }
+    }
   }
 }
