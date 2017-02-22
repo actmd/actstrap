@@ -5,6 +5,7 @@
 $font-family-sans-serif: 'Roboto', sans-serif;
 $input-padding-y-lg: 0.75rem; // Bootstrap's default padding for large inputs seemed way off.
 $input-padding-x-lg: 0.75rem;
+$enable-flex: 1;
 
 @import "bootstrap";
 
