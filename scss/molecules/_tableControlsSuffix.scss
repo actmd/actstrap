@@ -2,7 +2,7 @@
   text-align: right;
   white-space: nowrap;
 
-  a + a {
+  > a + a {
     margin-left: 0.25rem;
   }
 }

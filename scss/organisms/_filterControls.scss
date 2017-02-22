@@ -1,8 +1,7 @@
 .filter-controls {
-  border-bottom: 1px dotted #ddd;
-  padding:0.5rem 0;
-
-
+  border: 1px dotted #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 
   li.list-inline-item {
     &:not(:last-child) {
