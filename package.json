@@ -20,12 +20,12 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.5",
     "jquery.2": "^1.0.0",
-    "selectize": "0.12.1"
+    "selectize": "0.12.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^3.1.0",
     "handlebars": "^4.0.5",
     "html-to-json": "^0.6.0",
     "minimist": "^1.2.0",
