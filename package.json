@@ -4,7 +4,7 @@
   "description": "ACT.md UI Pattern Library",
   "scripts": {
     "http": "php -S localhost:9000 -t out",
-    "deploy": "rsync -ptcrzl --delete out/. ubuntu@54.86.154.81:/actmd/patterns"
+    "deploy": "rsync -ptcrzl --delete out/. ubuntu@patterns.act.md:/actmd/patterns"
   },
   "repository": {
     "type": "git",
