@@ -69,6 +69,7 @@ gulp.task('build-mobile-html', function () {
     // Mobile snippets are embedded individuall within iframes
     // to simulate viewing on a mobile device
     gulp.src(['snippets/mobile/**'])
+        .pipe(normalizeMobileSnippets())
         .pipe(gulp.dest('./out'));
 
     gulp.src(['snippets/mobile/**/*.html'])
@@ -231,6 +232,38 @@ function processSnippets() {
     }
 
     return through.obj(bufferContents, endStream);
+}
+
+/**
+ * Need to transform CSS/JS paths in the snippets to work on the server
+ * @returns {*}
+ */
+function normalizeMobileSnippets() {
+
+    var find = /\.\.\/\.\.\/out\//g,
+        replace = '../';
+
+    return through.obj(function(file, enc, cb) {
+
+        // ignore empty files
+        if (file.isNull()) {
+            cb();
+            return;
+        }
+
+        // we don't do streams
+        if (file.isStream()) {
+            this.emit('error', new gutil.PluginError('gulp-pattern-library', 'Streaming not supported'));
+            cb();
+            return;
+        }
+
+        var updatedContents = file.contents.toString().replace(find, replace);
+        file.contents = new Buffer(updatedContents);
+
+        this.push(file);
+        cb();
+    });
 }
 
 function renderTemplates(variant, path) {
