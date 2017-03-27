@@ -1,0 +1,29 @@
+.list-group-item-task {
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item-task .btn {
+  padding: 0.5rem;
+}
+
+.list-group-item-task .task-name {
+  flex: 1;
+  padding: 0 1rem;
+  line-height: 1.2;
+  font-size: 85%;
+}
+
+.list-group-item-task .task-assignee {
+  width: 5rem;
+}
+
+.task-assignee .tag {
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-assignee .tag + .tag {
+  margin-top:4px;
+}

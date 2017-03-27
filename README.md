@@ -1,6 +1,14 @@
 # actstrap
 
-ACT.md's web pattern library, building on [Bootstrap 4](http://v4-alpha.getbootstrap.com/) and inspired by Brad Frost's [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
+ACT.md's web pattern library, building on [Bootstrap 4](http://v4-alpha.getbootstrap.com/) and 
+inspired by Brad Frost's [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
+
+Our pattern library is organized by target device, and compiled into three outputs:
+
+* `actstrap-common.css`, used by all devices
+* `actstrap-desktop.css`, used by desktop (i.e. large-screened) devices
+* `actstrap-mobile.css`, used by mobile (i.e. smartphone and tablet) devices
+
 
 ## quickstart
 
@@ -34,16 +42,21 @@ $ gulp watch
 ### Add a pattern to the library
 
 ```
-$ gulp new-snippet --type=molecules --name=fooBarBaz
+$ gulp new-snippet --kind=common --type=molecules --name=fooBarBaz
 ```
 
-* Creates empty `scss/molecules/_fooBarBaz.scss`
-* Adds import for above to `style.scss`
-* Creates `snippets/molecules/fooBarBaz.html` with starter code (containing instructions)
+* Creates empty `scss/common/molecules/_fooBarBaz.scss`
+* Adds import for above to `scss/common/style.scss`
+* Creates `snippets/common/molecules/fooBarBaz.html` with starter code (containing instructions)
 
-Options for `--type` include:
+Options for `--kind`:
+
+* `common`
+* `desktop`
+* `mobile`
+
+Options for `--type`:
 
 * `atoms`
 * `molecules`
 * `organisms`
-* `templates`

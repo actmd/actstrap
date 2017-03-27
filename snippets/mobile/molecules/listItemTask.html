@@ -3,44 +3,43 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>{{name}}</title>
+    <title>List Item: Task</title>
 
     <!-- Add your description in the `content` attribute -->
-    <meta name="description" content="" />
+    <meta name="description" content="Mobile task list item." />
 
     <!-- Just for convenience, we link to the generated stylesheet,
     so you can view your snippet individually as you work on it. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,300italic,700italic&subset=latin,latin-ext" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="../../out/actstrap-common.css" />
-
-    {{#if isMobile}}
     <link rel="stylesheet" href="../../out/actstrap-mobile.css" />
-    {{else}}
-    <link rel="stylesheet" href="../../out/actstrap-desktop.css" />
-    {{/if}}
-
 
     <style>
-      {{#if isMobile}}
 
-      /* Single-snippet mobile preview CSS */
-
-      {{else}}
-
-      /* Single-snippet desktop preview CSS */
-      body {
-        margin: 5rem;
-        max-width: 50rem;
-      }
-
-      {{/if}}
     </style>
 
 </head>
 <body>
 
-<!-- Delete this comment and add your example HTML here -->
+<div class="list-group list-group-flush">
+    <div class="list-group-item list-group-item-task">
+        <button class="btn btn-sm btn-secondary"><i class="zmdi zmdi-check"></i></button>
+        <a class="task-name" href="#">Review assessment results with team</a>
+        <div class="task-assignee">
+            <span class="tag tag-danger">Yesterday</span>
+            <span class="tag tag-default">Patrick Schmid</span>
+        </div>
+    </div>
+    <div class="list-group-item list-group-item-task">
+        <button class="btn btn-sm btn-success"><i class="zmdi zmdi-check"></i></button>
+        <a class="task-name" href="#">This is an incredibly long task name, so we can evaluate whether to truncate this in mobile</a>
+        <div class="task-assignee">
+            <span class="tag tag-warning">Today</span>
+            <span class="tag tag-default">Rachel Roppolo</span>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

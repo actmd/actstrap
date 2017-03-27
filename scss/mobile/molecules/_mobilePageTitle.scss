@@ -1,7 +1,10 @@
+/* Need to increase body padding to avoid the mobile page title. */
+body { padding-top: 48px; }
+
 .mobile-page-title {
   display: flex;
   align-items: center;
-  height: 62px;
+  height: 48px;
 
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
@@ -12,8 +15,21 @@
     height: 21px;
   }
 
-  > .btn {
+  > a {
     flex: 1;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+
+    .zmdi-chevron-left {
+      vertical-align: -0.4rem;
+    }
   }
 
   > .title {
@@ -21,9 +37,4 @@
     text-align: center;
     line-height: 1;
   }
-}
-
-@media (max-width: 991px) {
-  /* Need to increase body padding to avoid the mobile page title. */
-  body { padding-top: 62px; }
 }
