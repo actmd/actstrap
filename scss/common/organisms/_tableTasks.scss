@@ -1,0 +1,120 @@
+/* tableTasks */
+
+.table-tasks {
+  .heading-plan {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    border-bottom: 1px solid #ddd;
+
+    .column-title {
+      font-size: 10pt;
+
+      .heading-plan {
+        display: block;
+        margin-bottom:0.25rem;
+        font-size: 9pt;
+      }
+    }
+
+    .task-btn-group {
+      > .btn:first-child {
+        border-bottom-right-radius: 0.2rem !important;
+        border-top-right-radius: 0.2rem !important;
+      }
+
+      .dropdown-toggle {
+        display: none;
+      }
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    line-height: 1.3;
+
+    @include media-breakpoint-down(sm) {
+      border-top: 1px solid #ddd;
+      background-color: white;
+    }
+  }
+
+  tr.completed a.title {
+    text-decoration: line-through;
+  }
+
+  // To accomodate the task button group
+  td:first-child {
+    padding-right: 0;
+
+    @include media-breakpoint-up(md) {
+      width: 55px;
+      padding-left: 0;
+    }
+  }
+
+  .btn-star-toggle {
+    cursor: pointer;
+  }
+
+  .zmdi-star-outline {
+    color: #999;
+  }
+
+  .zmdi-star-outline:hover, .zmdi-star {
+    color: goldenrod;
+  }
+
+  .column-plan {
+    width: 20%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .column-metadata {
+    white-space: nowrap;
+    font-size:85%;
+  }
+
+  .column-assignee {
+    line-height: 1;
+    width: 5rem;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 6rem;
+    }
+
+    .tag {
+      display: block;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      width: 5rem;
+
+      &:last-child {
+        margin-top: 0.25rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: 6rem;
+      }
+    }
+  }
+
+  .column-reorder {
+    white-space: nowrap;
+    color: #999;
+    cursor: pointer;
+
+    .zmdi-more-vert:first-child {
+      margin-right:2px;
+    }
+  }
+
+}
