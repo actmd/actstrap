@@ -1,0 +1,20 @@
+.list-group-item-event {
+  display: flex;
+  align-items: center;
+
+  .event-time, .event-name {
+    font-size: 85%;
+  }
+
+  .event-time {
+    width: 5rem;
+  }
+
+  .event-name {
+    flex: 1;
+  }
+
+  .event-more {
+    margin-left:0.5rem;
+  }
+}

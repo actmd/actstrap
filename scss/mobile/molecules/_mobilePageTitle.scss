@@ -1,0 +1,41 @@
+/* Need to increase body padding to avoid the mobile page title. */
+body { padding-top: 48px; }
+
+.mobile-page-title {
+  display: flex;
+  align-items: center;
+  height: 48px;
+
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  img {
+    height: 21px;
+  }
+
+  > a {
+    flex: 1;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+
+    .zmdi-chevron-left {
+      vertical-align: -0.4rem;
+    }
+  }
+
+  > .title {
+    flex: 5;
+    text-align: center;
+    line-height: 1;
+    padding: 0 0.5rem;
+  }
+}

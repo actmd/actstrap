@@ -1,0 +1,22 @@
+<section class="patterns-pattern" id="{{slug}}">
+    <h2>{{name}}</h2>
+    <p>{{description}}</p>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#{{slug}}_demo">Demo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#{{slug}}_html">HTML</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="{{slug}}_demo" role="tabpanel">
+      <iframe src="{{path}}" seamless width="335" height="500"></iframe>
+    </div>
+    <div class="tab-pane" id="{{slug}}_html" role="tabpanel">
+      <pre class="patterns-code"><code>{{example}}</code></pre>
+    </div>
+  </div>
+</section>

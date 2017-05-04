@@ -3,44 +3,47 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>{{name}}</title>
+    <title>List Item: Event</title>
 
     <!-- Add your description in the `content` attribute -->
-    <meta name="description" content="" />
+    <meta name="description" content="Mobile event list item." />
 
     <!-- Just for convenience, we link to the generated stylesheet,
     so you can view your snippet individually as you work on it. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,300italic,700italic&subset=latin,latin-ext" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="../../out/actstrap-common.css" />
-
-    {{#if isMobile}}
     <link rel="stylesheet" href="../../out/actstrap-mobile.css" />
-    {{else}}
-    <link rel="stylesheet" href="../../out/actstrap-desktop.css" />
-    {{/if}}
-
 
     <style>
-      {{#if isMobile}}
 
-      /* Single-snippet mobile preview CSS */
-
-      {{else}}
-
-      /* Single-snippet desktop preview CSS */
-      body {
-        margin: 5rem;
-        max-width: 50rem;
-      }
-
-      {{/if}}
     </style>
 
 </head>
 <body>
 
-<!-- Delete this comment and add your example HTML here -->
+<div class="list-group-header text-muted">
+    Monday, April 2, 2017
+</div>
+
+<div class="list-group list-group-flush">
+    <div class="list-group-item list-group-item-event">
+        <div class="event-time">
+            9:00 AM
+        </div>
+        <a class="event-name" href="#">Behavioral testing event showing the advantage of
+        using flexbox over tables</a>
+    </div>
+    <div class="list-group-item list-group-item-event">
+        <div class="event-time">
+            10:00 AM
+        </div>
+        <a class="event-name" href="#">eHealth Visit with a very long title to see how it wraps with a button</a>
+        <div class="event-more">
+          <button class="btn btn-sm btn-info">Video <i class="zmdi zmdi-arrow-right-top"></i></button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

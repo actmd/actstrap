@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>ACT.md Pattern Library</title>
+    <title>ACT.md Pattern Library - {{variant}}</title>
 
     <meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,300italic,700italic&subset=latin,latin-ext" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
 
-    <link href="actstrap.css" rel="stylesheet"/>
+    <link href="actstrap-common.css" rel="stylesheet"/>
+
+    {{#unless isMobile}}
+      <link href="actstrap-desktop.css" rel="stylesheet"/>
+    {{/unless}}
+
     <link href="css/patterns.css" rel="stylesheet"/>
     <link href="css/patterns-custom.css" rel="stylesheet"/>
 </head>
@@ -24,62 +29,78 @@
         <a href="index.html" class="navbar-brand">ACT.md Pattern Library</a>
         <div class="primary-navigation-container">
             <div class="nav navbar-nav">
-                {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
-                {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
-                {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
-                {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
+              <a class="nav-item nav-link" href="index.html">Common</a>
+              <a class="nav-item nav-link" href="desktop.html">Desktop</a>
+              <a class="nav-item nav-link" href="mobile.html">Mobile</a>
             </div>
         </div>
     </div>
 </nav>
-
-{{#if atoms}}
-    <div class="container patterns" id="atoms">
-        <div class="row">
-            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Atoms</h1></div>
+<nav class="navbar navbar-full navbar-light bg-faded">
+  <div class="container">
+    <a href="#" class="navbar-brand">{{variant}}</a>
+    <div class="primary-navigation-container">
+      {{#with snippets}}
+        <div class="nav navbar-nav">
+          {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
+          {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
+          {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
+          {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
         </div>
-        {{#with atoms}}
-            {{> _content }}
-        {{/with}}
+      {{/with}}
     </div>
-{{/if}}
+  </div>
+</nav>
 
-{{#if molecules}}
-    <div class="container patterns" id="molecules">
-        <div class="row">
-            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Molecules</h1></div>
-        </div>
-        {{#with molecules}}
-            {{> _content }}
-        {{/with}}
-    </div>
-{{/if}}
+{{#with snippets}}
+  {{#if atoms}}
+      <div class="container patterns" id="atoms">
+          <div class="row">
+              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Atoms</h1></div>
+          </div>
+          {{#with atoms}}
+              {{> _content }}
+          {{/with}}
+      </div>
+  {{/if}}
 
-{{#if organisms}}
-    <div class="container patterns" id="organisms">
-        <div class="row">
-            <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Organisms</h1></div>
-        </div>
-        {{#with organisms}}
-            {{> _content }}
-        {{/with}}
-    </div>
-{{/if}}
+  {{#if molecules}}
+      <div class="container patterns" id="molecules">
+          <div class="row">
+              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Molecules</h1></div>
+          </div>
+          {{#with molecules}}
+              {{> _content }}
+          {{/with}}
+      </div>
+  {{/if}}
 
-{{#if templates}}
-    <div class="container patterns" id="templates">
-        <div class="row">
-            <div class="col-md-9 offset-md-3">
-                <h1 class="patterns-title">Templates</h1>
-                <ul>
-                    {{#each templates.items}}
-                        <li><a href="templates/{{slug}}.html">{{name}}</a></li>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div>
-{{/if}}
+  {{#if organisms}}
+      <div class="container patterns" id="organisms">
+          <div class="row">
+              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Organisms</h1></div>
+          </div>
+          {{#with organisms}}
+              {{> _content }}
+          {{/with}}
+      </div>
+  {{/if}}
+
+  {{#if templates}}
+      <div class="container patterns" id="templates">
+          <div class="row">
+              <div class="col-md-9 offset-md-3">
+                  <h1 class="patterns-title">Templates</h1>
+                  <ul>
+                      {{#each templates.items}}
+                          <li><a href="templates/{{slug}}.html">{{name}}</a></li>
+                      {{/each}}
+                  </ul>
+              </div>
+          </div>
+      </div>
+  {{/if}}
+{{/with}}
 
 
 <script src="js/jquery.min.js"></script>

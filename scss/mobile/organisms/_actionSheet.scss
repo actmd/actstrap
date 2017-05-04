@@ -1,0 +1,20 @@
+.action-sheet, .action-sheet-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1100;
+}
+
+.action-sheet-container {
+  top: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.action-sheet {
+  bottom: 0;
+  padding: 1rem 1.25rem;
+
+  .btn > .zmdi:first-child {
+    margin-right:0.5rem;
+  }
+}

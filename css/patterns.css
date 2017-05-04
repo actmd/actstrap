@@ -24,12 +24,20 @@ h1.patterns-title {
     margin-bottom: 3rem;
 }
 
+.patterns section.patterns-pattern > .nav-tabs {
+    margin-bottom: 1rem;
+}
+
 .patterns section.patterns-pattern > .patterns-example > :last-child {
     margin-bottom: 0;
 }
 
-.patterns section.patterns-pattern > .patterns-code {
+.patterns section.patterns-pattern .patterns-code {
     background-color: #eee;
     padding: 1em;
     max-height:800px;
+}
+
+.patterns-pattern iframe {
+    border: 1px solid #ccc;
 }
