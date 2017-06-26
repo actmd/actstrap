@@ -3,29 +3,20 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>{{name}}</title>
+    <title>List Group Item: Icon-Prefixed</title>
 
     <!-- Add your description in the `content` attribute -->
-    <meta name="description" content="" />
+    <meta name="description" content="Flexbox layout for prefixing a list item with an icon." />
 
     <!-- Just for convenience, we link to the generated stylesheet,
     so you can view your snippet individually as you work on it. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic,300italic,700italic&subset=latin,latin-ext" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="../../../out/actstrap-common.css" />
-    {{#if isMobile}}
-    <link rel="stylesheet" href="../../../out/actstrap-mobile.css" />
-    {{else}}
     <link rel="stylesheet" href="../../../out/actstrap-desktop.css" />
-    {{/if}}
 
 
     <style>
-      {{#if isMobile}}
-
-      /* Single-snippet mobile preview CSS */
-
-      {{else}}
 
       /* Single-snippet desktop preview CSS */
       body {
@@ -33,13 +24,27 @@
         max-width: 50rem;
       }
 
-      {{/if}}
     </style>
 
 </head>
 <body>
 
-<!-- Delete this comment and add your example HTML here -->
+<div class="list-group">
+  <a href="javascript:void(0);" class="list-group-item list-group-item-action list-group-item-icon-prefix">
+    <i class="zmdi zmdi-shield-security"></i>
+    <div>
+      <strong>Grant permission</strong> <span class="text-muted">to current plan</span>
+      <div class="text-minor">CBT Nurses · Administrator</div>
+    </div>
+  </a>
+  <a href="javascript:void(0);" class="list-group-item list-group-item-action list-group-item-icon-prefix">
+    <i class="zmdi zmdi-format-align-left"></i>
+    <div class="list-group-item-icon-content">
+      <strong>Add section</strong>
+      <div class="text-minor">Lesson 1: Deep Breathing</div>
+    </div>
+  </a>
+</div>
 
 </body>
 </html>

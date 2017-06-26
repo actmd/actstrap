@@ -13,6 +13,12 @@ body, .tooltip {
   font-weight: 200;
 }
 
+body > .container-fluid.full-width {
+  max-width: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .tooltip {
   line-height: 1.3;
 }
@@ -126,3 +132,4 @@ body, .tooltip {
 @import "molecules/smallDropdownMenu";
 
 @import "organisms/tableTasks";
+@import "molecules/listGroupItemIconPrefix";

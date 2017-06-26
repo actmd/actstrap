@@ -1,0 +1,22 @@
+.card-workflow-step {
+  .card-header .float-xs-right a {
+    margin-left: 0.5rem;
+  }
+
+  .list-group-item {
+    white-space:nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    .zmdi-caret-right {
+      margin-top:-4px;
+    }
+  }
+}
+
+
+
+
+
+
+
