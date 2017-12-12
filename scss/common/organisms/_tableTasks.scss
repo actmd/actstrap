@@ -67,13 +67,15 @@
   }
 
   .column-title {
-    .task-description {
-      max-width: 20rem;
-
-      a {
-        color: inherit;
-        text-decoration: underline;
+    @media (max-width: 374px) {
+      .task-description {
+        display: none;
       }
+    }
+
+    .task-description a {
+      color: inherit;
+      text-decoration: underline;
     }
   }
 
