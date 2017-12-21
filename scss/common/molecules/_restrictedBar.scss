@@ -1,7 +1,12 @@
-/* privacyBar */
 .restricted-bar {
   background-color: $state-info-bg;
   color: $state-info-text;
+
+  @include media-breakpoint-up(sm) {
+    .breadcrumb + & {
+      margin-bottom: 1em;
+    }
+  }
 
   > .zmdi {
     margin-right:0.25rem;
@@ -14,5 +19,9 @@
 
   .btn {
     margin-top:-1px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }
