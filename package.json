@@ -18,12 +18,13 @@
   },
   "homepage": "http://patterns.act.md",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.5",
-    "jquery.2": "^1.0.0",
+    "bootstrap": "~>4.1.2",
+    "jquery": ">=3.0.0",
+    "popper.js": "^1.14.4",
     "selectize": "0.12.4"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
