@@ -1,7 +1,7 @@
 .restricted-bar {
-  color: color-yiq(theme-color("info"));
-  @include gradient-bg(theme-color("info"));
-
+  color: theme-color-level("info", $alert-color-level);
+  @include gradient-bg(theme-color-level("info", $alert-bg-level));
+  line-height: 1.9;
 
   @include media-breakpoint-up(sm) {
     .breadcrumb + & {

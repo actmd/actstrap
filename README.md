@@ -1,6 +1,6 @@
 # actstrap
 
-ACT.md's web pattern library, building on [Bootstrap 4](http://v4-alpha.getbootstrap.com/) and 
+ACT.md's web pattern library, building on [Bootstrap 4](http://getbootstrap.com/) and
 inspired by Brad Frost's [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/)
 
 Our pattern library is organized by target device, and compiled into three outputs:
@@ -30,7 +30,7 @@ $ open out/index.html
 
 ```
 $ gulp
-$ cp out/actstrap.css ../act-heka/vendor/assets/stylesheets/
+$ cp out/*.css ../act-heka/vendor/assets/stylesheets/
 ```
 
 ### Regenerate the library whenever a stylesheet, snippet, or template changes

@@ -6,14 +6,9 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 $input-padding-y-lg: 0.75rem; // Bootstrap's default padding for large inputs seemed way off.
 $input-padding-x-lg: 0.75rem;
 $enable-flex: 1;
+// $secondary: $gray-400;
 
 @import "bootstrap";
-
-// // We're bringing this in from the beta, since button groups are flawed in alpha
-// $input-btn-padding-x: .75rem !default;
-// $input-btn-padding-x-sm: .5rem !default;
-// $input-btn-padding-x-lg: 1rem !default;
-// @import "button-group";
 
 body, .tooltip {
   font-weight: 200;
@@ -29,7 +24,11 @@ body > .container-fluid.full-width {
   line-height: 1.3;
 }
 
-.tag {
+.btn-outline-secondary {
+  border-color: #ccc;
+}
+
+.badge {
   /* In our font, the small label text needs to be a bit lighter. */
   font-weight: 300;
   /* By Bootstrap's default, tags don't seem to align with nearby text quite right */
@@ -56,7 +55,7 @@ body > .container-fluid.full-width {
 }
 
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
-.card-block > :last-child,
+.card-body > :last-child,
 .list-group-item > :last-child,
 .card-footer > :last-child,
 .card > .list-group:last-child {
@@ -84,7 +83,6 @@ body > .container-fluid.full-width {
 /* Card titles look better when they're lighter */
 .card-title {
   font-weight: 300;
-  margin-bottom: 1rem;
 }
 
 /* These links, by default, are too light. */
@@ -93,8 +91,15 @@ body > .container-fluid.full-width {
 }
 
 /* When .text-muted (normally gray) is used in an .active .list-group-item (blue background) make a little color adjustment. */
-.list-group-item.active .text-muted {
-  color: rgba(255, 255, 255, 0.6) !important;
+.list-group-item.active {
+  .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .badge {
+    background-color: white;
+    color: theme-color("primary");
+  }
 }
 
 /* When we use a fixed-width icon in a list group item, add some margin, so we don't need to use spaces. */
@@ -103,8 +108,8 @@ body > .container-fluid.full-width {
 }
 
 /* Labels within a list-group-item need their positioning tweaked just a bit. */
-.list-group-item .tag.float-xs-right {
-  margin-top: 3px;
+.list-group-item .badge.float-right {
+  margin-top: 2px;
 }
 
 /* Links within alert elements look better when they inherit their color from the container.
@@ -120,14 +125,12 @@ body > .container-fluid.full-width {
 }
 
 @import "atoms/applicationNotice";
-@import "atoms/tagMuted";
+@import "atoms/badgeMuted";
 @import "atoms/textMinor";
 @import "atoms/skinnyHeader";
-@import "atoms/userPresenceIndicator";
-@import "atoms/tagClear";
+@import "atoms/badgeClear";
 @import "atoms/personPreview";
-@import "atoms/cardBlockScroll";
-@import "atoms/activePillTag";
+@import "atoms/activePillBadge";
 @import "atoms/backgroundBranded";
 @import "atoms/buttonClear";
 

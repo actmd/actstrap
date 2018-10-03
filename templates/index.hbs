@@ -24,87 +24,82 @@
 </head>
 <body>
 
-<nav class="navbar navbar-full navbar-dark bg-inverse">
-    <div class="container">
-        <a href="index.html" class="navbar-brand">ACT.md Pattern Library</a>
-        <div class="primary-navigation-container">
-            <div class="nav navbar-nav">
-              <a class="nav-item nav-link" href="index.html">Common</a>
-              <a class="nav-item nav-link" href="desktop.html">Desktop</a>
-              <a class="nav-item nav-link" href="mobile.html">Mobile</a>
-            </div>
-        </div>
-    </div>
-</nav>
-<nav class="navbar navbar-full navbar-light bg-faded">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a href="#" class="navbar-brand">{{variant}}</a>
-    <div class="primary-navigation-container">
-      {{#with snippets}}
-        <div class="nav navbar-nav">
-          {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
-          {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
-          {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
-          {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
-        </div>
-      {{/with}}
+    <a href="index.html" class="navbar-brand">ACT.md Pattern Library</a>
+    <div class="nav navbar-nav mr-auto">
+      <a class="nav-item nav-link" href="index.html">Common</a>
+      <a class="nav-item nav-link" href="desktop.html">Desktop</a>
+      <a class="nav-item nav-link" href="mobile.html">Mobile</a>
     </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="navbar-brand">{{variant}}</div>
+    {{#with snippets}}
+      <div class="nav navbar-nav mr-auto">
+        {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
+        {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
+        {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
+        {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
+      </div>
+    {{/with}}
   </div>
 </nav>
 
 {{#with snippets}}
   {{#if atoms}}
-      <div class="container patterns" id="atoms">
-          <div class="row">
-              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Atoms</h1></div>
-          </div>
-          {{#with atoms}}
-              {{> _content }}
-          {{/with}}
+    <div class="container patterns" id="atoms">
+      <div class="row">
+        <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Atoms</h1></div>
       </div>
+      {{#with atoms}}
+        {{> _content }}
+      {{/with}}
+    </div>
   {{/if}}
 
   {{#if molecules}}
-      <div class="container patterns" id="molecules">
-          <div class="row">
-              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Molecules</h1></div>
-          </div>
-          {{#with molecules}}
-              {{> _content }}
-          {{/with}}
+    <div class="container patterns" id="molecules">
+      <div class="row">
+        <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Molecules</h1></div>
       </div>
+      {{#with molecules}}
+        {{> _content }}
+      {{/with}}
+    </div>
   {{/if}}
 
   {{#if organisms}}
-      <div class="container patterns" id="organisms">
-          <div class="row">
-              <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Organisms</h1></div>
-          </div>
-          {{#with organisms}}
-              {{> _content }}
-          {{/with}}
+    <div class="container patterns" id="organisms">
+      <div class="row">
+        <div class="col-md-9 offset-md-3"><h1 class="patterns-title">Organisms</h1></div>
       </div>
+      {{#with organisms}}
+        {{> _content }}
+      {{/with}}
+    </div>
   {{/if}}
 
   {{#if templates}}
-      <div class="container patterns" id="templates">
-          <div class="row">
-              <div class="col-md-9 offset-md-3">
-                  <h1 class="patterns-title">Templates</h1>
-                  <ul>
-                      {{#each templates.items}}
-                          <li><a href="templates/{{slug}}.html">{{name}}</a></li>
-                      {{/each}}
-                  </ul>
-              </div>
-          </div>
+    <div class="container patterns" id="templates">
+      <div class="row">
+        <div class="col-md-9 offset-md-3">
+          <h1 class="patterns-title">Templates</h1>
+          <ul>
+            {{#each templates.items}}
+              <li><a href="templates/{{slug}}.html">{{name}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
+    </div>
   {{/if}}
 {{/with}}
 
-
 <script src="js/jquery.min.js"></script>
-<script src="js/tether.min.js"></script>
+<script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script>
