@@ -48,7 +48,7 @@ gulp.task('build-mobile-css', function () {
 /**
  * Builds all the actstrap CSS bundles
  */
-gulp.task('build-css', ['build-common-css', 'build-desktop-css', 'build-mobile-css']);
+gulp.task('build-css', gulp.series('build-common-css', 'build-desktop-css', 'build-mobile-css'));
 
 
 gulp.task('build-common-html', function () {
@@ -81,7 +81,7 @@ gulp.task('build-mobile-html', function () {
 /**
  * Builds all the pattern library HTML pages
  */
-gulp.task('build-html', ['build-common-html', 'build-desktop-html', 'build-mobile-html']);
+gulp.task('build-html', gulp.series('build-common-html', 'build-desktop-html', 'build-mobile-html'));
 
 
 /**
@@ -115,9 +115,9 @@ gulp.task('watch', function () {
     gulp.watch('css/*', ['copy-patterns-css']);
 });
 
-gulp.task('build', ['build-css', 'build-html', 'copy-patterns-css', 'copy-patterns-js']);
+gulp.task('build', gulp.series('build-css', 'build-html', 'copy-patterns-css', 'copy-patterns-js'));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));
 
 
 /*
