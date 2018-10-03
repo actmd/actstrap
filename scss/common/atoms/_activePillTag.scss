@@ -5,6 +5,6 @@
 
   &.active .tag.tag-default {
     background-color: white;
-    color: $brand-primary;
+    color: theme-color("primary");
   }
 }

@@ -1,6 +1,7 @@
 // Import Bootstrap mixins and variables
-@import "mixins";
+@import "functions";
 @import "variables";
+@import "mixins";
 
 @import "molecules/tableHeadless";
 @import "molecules/tableIconPrefix";

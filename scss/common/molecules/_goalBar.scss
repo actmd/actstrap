@@ -7,8 +7,10 @@
 }
 
 .goal-bar {
-  background-color: $state-warning-bg;
-  color: $state-warning-text;
+  // background-color: $state-warning-bg;
+  // color: $state-warning-text;
+  color: color-yiq(theme-color("warning"));
+  @include gradient-bg(theme-color("warning"));
 
   .btn {
     vertical-align: 1px;
@@ -16,7 +18,7 @@
   }
 
   &.achieved {
-    background-color: $state-success-bg;
-    color: $state-success-text;
+    color: color-yiq(theme-color("success"));
+    @include gradient-bg(theme-color("success"));
   }
 }

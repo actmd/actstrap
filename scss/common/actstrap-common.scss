@@ -9,11 +9,11 @@ $enable-flex: 1;
 
 @import "bootstrap";
 
-// We're bringing this in from the beta, since button groups are flawed in alpha
-$input-btn-padding-x: .75rem !default;
-$input-btn-padding-x-sm: .5rem !default;
-$input-btn-padding-x-lg: 1rem !default;
-@import "button-group";
+// // We're bringing this in from the beta, since button groups are flawed in alpha
+// $input-btn-padding-x: .75rem !default;
+// $input-btn-padding-x-sm: .5rem !default;
+// $input-btn-padding-x-lg: 1rem !default;
+// @import "button-group";
 
 body, .tooltip {
   font-weight: 200;
@@ -125,7 +125,6 @@ body > .container-fluid.full-width {
 @import "atoms/skinnyHeader";
 @import "atoms/userPresenceIndicator";
 @import "atoms/tagClear";
-@import "atoms/permissionCheckbox";
 @import "atoms/personPreview";
 @import "atoms/cardBlockScroll";
 @import "atoms/activePillTag";

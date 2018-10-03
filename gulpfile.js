@@ -5,44 +5,44 @@ var concat = require('gulp-concat');
 /**
  * Builds actstrap-common.css
  */
-gulp.task('build-common-css', function () {
-    gulp.src(['scss/common/**/*.scss'])
-        .pipe(sass({
-            includePaths: [
-                './node_modules/bootstrap/scss',
-                './node_modules/selectize/dist/less'
-            ]
-        }).on('error', sass.logError))
-        .pipe(concat('actstrap-common.css'))
-        .pipe(gulp.dest('./out'));
+gulp.task('build-common-css', function() {
+  return gulp.src(['scss/common/**/*.scss'])
+    .pipe(sass({
+      includePaths: [
+        './node_modules/bootstrap/scss',
+        './node_modules/selectize/dist/less'
+      ]
+    }).on('error', sass.logError))
+    .pipe(concat('actstrap-common.css'))
+    .pipe(gulp.dest('./out'));
 });
 
 /**
  * Builds actstrap-desktop.css
  */
-gulp.task('build-desktop-css', function () {
-    gulp.src(['scss/desktop/**/*.scss'])
-        .pipe(sass({
-            includePaths: [
-                './node_modules/bootstrap/scss'
-            ]
-        }).on('error', sass.logError))
-        .pipe(concat('actstrap-desktop.css'))
-        .pipe(gulp.dest('./out'));
+gulp.task('build-desktop-css', function() {
+  return gulp.src(['scss/desktop/**/*.scss'])
+    .pipe(sass({
+      includePaths: [
+        './node_modules/bootstrap/scss'
+      ]
+    }).on('error', sass.logError))
+    .pipe(concat('actstrap-desktop.css'))
+    .pipe(gulp.dest('./out'));
 });
 
 /**
  * Builds actstrap-mobile.css
  */
-gulp.task('build-mobile-css', function () {
-    gulp.src(['scss/mobile/**/*.scss'])
-        .pipe(sass({
-            includePaths: [
-                './node_modules/bootstrap/scss'
-            ]
-        }).on('error', sass.logError))
-        .pipe(concat('actstrap-mobile.css'))
-        .pipe(gulp.dest('./out'));
+gulp.task('build-mobile-css', function() {
+  return gulp.src(['scss/mobile/**/*.scss'])
+    .pipe(sass({
+      includePaths: [
+        './node_modules/bootstrap/scss'
+      ]
+    }).on('error', sass.logError))
+    .pipe(concat('actstrap-mobile.css'))
+    .pipe(gulp.dest('./out'));
 });
 
 /**
@@ -51,32 +51,35 @@ gulp.task('build-mobile-css', function () {
 gulp.task('build-css', gulp.series('build-common-css', 'build-desktop-css', 'build-mobile-css'));
 
 
-gulp.task('build-common-html', function () {
-    gulp.src(['snippets/common/**/*.html'])
-        .pipe(processSnippets())
-        .pipe(renderTemplates('Common', 'index.html'))
-        .pipe(gulp.dest("./out"));
+gulp.task('build-common-html', function() {
+  return gulp.src(['snippets/common/**/*.html'])
+    .pipe(processSnippets())
+    .pipe(renderTemplates('Common', 'index.html'))
+    .pipe(gulp.dest("./out"));
 });
 
-gulp.task('build-desktop-html', function () {
-    gulp.src(['snippets/desktop/**/*.html'])
-        .pipe(processSnippets())
-        .pipe(renderTemplates('Desktop', 'desktop.html'))
-        .pipe(gulp.dest("./out"));
+gulp.task('build-desktop-html', function() {
+  return gulp.src(['snippets/desktop/**/*.html'])
+    .pipe(processSnippets())
+    .pipe(renderTemplates('Desktop', 'desktop.html'))
+    .pipe(gulp.dest("./out"));
 });
 
-gulp.task('build-mobile-html', function () {
-    // Mobile snippets are embedded individuall within iframes
+gulp.task('build-mobile-html', gulp.parallel(
+  function() {
+    // Mobile snippets are embedded individual within iframes
     // to simulate viewing on a mobile device
-    gulp.src(['snippets/mobile/**'])
+    return gulp.src(['snippets/mobile/**'])
         .pipe(normalizeMobileSnippets())
         .pipe(gulp.dest('./out'));
-
-    gulp.src(['snippets/mobile/**/*.html'])
+  },
+  function() {
+    return gulp.src(['snippets/mobile/**/*.html'])
         .pipe(processSnippets())
         .pipe(renderTemplates('Mobile', 'mobile.html'))
         .pipe(gulp.dest("./out"));
-});
+  }
+));
 
 /**
  * Builds all the pattern library HTML pages
@@ -87,27 +90,24 @@ gulp.task('build-html', gulp.series('build-common-html', 'build-desktop-html', '
 /**
  * Copy the CSS needed to render the pattern library web site.
  */
-gulp.task('copy-patterns-css', function () {
-    return gulp.src([
-        'css/*',
-        'node_modules/prismjs/themes/prism.css'
-    ]).pipe(gulp.dest('./out/css'));
+gulp.task('copy-patterns-css', function() {
+  return gulp.src([
+    'css/*'
+  ]).pipe(gulp.dest('./out/css'));
 });
 
 /**
  * Copy the JS needed to render the pattern library web site.
  */
-gulp.task('copy-patterns-js', function () {
-    return gulp.src([
-        'node_modules/jquery.2/node_modules/jquery/dist/jquery.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/prismjs/prism.js',
-        'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js',
-        'node_modules/tether/dist/js/tether.min.js'
-    ]).pipe(gulp.dest('./out/js'))
+gulp.task('copy-patterns-js', function() {
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/popper.js/dist/popper.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js'
+  ]).pipe(gulp.dest('./out/js'))
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function(done) {
     gulp.start('build');
     gulp.watch('scss/**/*.scss', ['build-css']);
     gulp.watch('snippets/**/*.html', ['build-html']);

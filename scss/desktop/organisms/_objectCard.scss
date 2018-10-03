@@ -1,11 +1,11 @@
 /* objectCard */
 
 .card-header-archived {
-  color: $state-warning-text;
-  background-color: $state-warning-bg;
+  color: color-yiq(theme-color("warning"));
+  @include gradient-bg(theme-color("warning"));
 }
 
 .card-header-deleted {
-  color: $state-danger-text;
-  background-color: $state-danger-bg;
+  color: color-yiq(theme-color("danger"));
+  @include gradient-bg(theme-color("danger"));
 }
