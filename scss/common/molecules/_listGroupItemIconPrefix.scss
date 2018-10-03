@@ -1,0 +1,14 @@
+.list-group-item-icon-prefix {
+  display: flex;
+  align-items: center;
+
+  > :first-child {
+    width: 1.75rem;
+  }
+
+  .list-group-item-icon-content {
+    flex: 1;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -66,6 +66,19 @@
     color: goldenrod;
   }
 
+  .column-title {
+    @media (max-width: 374px) {
+      .task-description {
+        display: none;
+      }
+    }
+
+    .task-description a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
   .column-plan {
     width: 20%;
 
