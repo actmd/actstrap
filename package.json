@@ -27,7 +27,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.5.3",
     "html-to-json": "^0.6.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
