@@ -263,7 +263,7 @@ function normalizeMobileSnippets() {
     }
 
     var updatedContents = file.contents.toString().replace(find, replace);
-    file.contents = new Buffer(updatedContents);
+    file.contents = new Buffer.from(updatedContents);
 
     this.push(file);
     cb();
@@ -291,7 +291,7 @@ function renderTemplates(variant, path) {
 
     this.push(new File({
       path: path,
-      contents: new Buffer(tmpl({
+      contents: new Buffer.from(tmpl({
         isMobile: isMobile,
         variant: variant,
         snippets: snippets

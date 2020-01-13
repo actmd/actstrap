@@ -1,6 +1,13 @@
 // Import Bootstrap mixins and variables
 @import "mixins";
+@import "functions";
 @import "variables";
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$brand-danger: #d9534f !default;
+$custom-checkbox-radius: $border-radius !default;
 
 body {
   background-color: #eee;
