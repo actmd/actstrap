@@ -23,34 +23,33 @@
     <link href="css/patterns-custom.css" rel="stylesheet"/>
 </head>
 <body>
-
-<nav class="navbar navbar-full navbar-dark bg-inverse">
-    <div class="container">
-        <a href="index.html" class="navbar-brand">ACT.md Pattern Library</a>
-        <div class="primary-navigation-container">
-            <div class="nav navbar-nav">
-              <a class="nav-item nav-link" href="index.html">Common</a>
-              <a class="nav-item nav-link" href="desktop.html">Desktop</a>
-              <a class="nav-item nav-link" href="mobile.html">Mobile</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">ACT.md Pattern Library</a>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="index.html">Common</a>
+                    <a class="nav-item nav-link" href="desktop.html">Desktop</a>
+                    <a class="nav-item nav-link" href="mobile.html">Mobile</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-<nav class="navbar navbar-full navbar-light bg-faded">
-  <div class="container">
-    <a href="#" class="navbar-brand">{{variant}}</a>
-    <div class="primary-navigation-container">
-      {{#with snippets}}
-        <div class="nav navbar-nav">
-          {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
-          {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
-          {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
-          {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand">{{variant}}</a>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav mr-auto">
+                {{#with snippets}}
+                    {{#if atoms}}<a href="#atoms" class="nav-item nav-link">Atoms</a>{{/if}}
+                    {{#if molecules}}<a href="#molecules" class="nav-item nav-link">Molecules</a>{{/if}}
+                    {{#if organisms}}<a href="#organisms" class="nav-item nav-link">Organisms</a>{{/if}}
+                    {{#if templates}}<a href="#templates" class="nav-item nav-link">Templates</a>{{/if}}
+                {{/with}}
+                </div>
+            </div>
         </div>
-      {{/with}}
-    </div>
-  </div>
-</nav>
+    </nav>
 
 {{#with snippets}}
   {{#if atoms}}
