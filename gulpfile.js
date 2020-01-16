@@ -101,7 +101,8 @@ gulp.task('copy-patterns-css', function() {
  */
 gulp.task('copy-patterns-js', function() {
   return gulp.src([
-    'node_modules/popper.js/dist/popper.js',
+    'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/popper.js/dist/umd/popper.min.js.map',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
