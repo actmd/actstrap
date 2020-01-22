@@ -30,7 +30,7 @@ $ open out/index.html
 
 ```
 $ gulp
-$ cp out/actstrap.css ../act-heka/vendor/assets/stylesheets/
+$ cp out/actstrap-common.css ../act-heka/vendor/assets/stylesheets/
 ```
 
 ### Regenerate the library whenever a stylesheet, snippet, or template changes

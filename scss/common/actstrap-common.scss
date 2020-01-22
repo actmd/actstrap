@@ -48,7 +48,7 @@ body > .container-fluid.full-width {
   line-height: 1.3;
 }
 
-.tag {
+.badge {
   /* In our font, the small label text needs to be a bit lighter. */
   font-weight: 300;
   /* By Bootstrap's default, tags don't seem to align with nearby text quite right */
@@ -123,7 +123,7 @@ body > .container-fluid.full-width {
 }
 
 /* Labels within a list-group-item need their positioning tweaked just a bit. */
-.list-group-item .tag.float-sm-right {
+.list-group-item .badge.float-sm-right {
   margin-top: 3px;
 }
 

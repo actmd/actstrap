@@ -3,7 +3,7 @@
     margin-left:0.5rem;
   }
 
-  &.active .tag.tag-default {
+  &.active .badge.badge-secondary {
     background-color: white;
     color: $brand-primary;
   }
