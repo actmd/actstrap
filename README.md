@@ -16,7 +16,7 @@ Our pattern library is organized by target device, and compiled into three outpu
 
 ```
 $ npm install --global gulp-cli
-$ npm install
+$ npm ci install
 ```
 
 ### Generate the library and view it
