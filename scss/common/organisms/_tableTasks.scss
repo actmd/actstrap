@@ -77,6 +77,13 @@
       color: inherit;
       text-decoration: underline;
     }
+
+    .task-description {
+      max-width: 20rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .column-plan {
