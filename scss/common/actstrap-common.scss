@@ -20,13 +20,7 @@ $state-danger-bg: #f2dede !default;
 $state-warning-text: #8a6d3b !default;
 $state-warning-bg: #fcf8e3 !default;
 $state-success-bg: #dff0d8 !default;
-$brand-danger: #d9534f !default;
-$brand-success:         #5cb85c !default;
 $brand-primary:         darken(#428bca, 6.5%) !default;
-
-$custom-checkbox-radius: $border-radius !default;
-$custom-control-checked-indicator-color: $white !default;
-$custom-checkbox-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$custom-control-checked-indicator-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !default;
 
 // We're bringing this in from the beta, since button groups are flawed in alpha
 $input-btn-padding-x: .75rem !default;
@@ -76,7 +70,7 @@ body > .container-fluid.full-width {
 }
 
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
-.card-block > :last-child,
+.card-body > :last-child,
 .list-group-item > :last-child,
 .card-footer > :last-child,
 .card > .list-group:last-child {
@@ -92,7 +86,7 @@ body > .container-fluid.full-width {
   .card-link,
   .card-text,
   .card-subtitle,
-  .card-blockquote .blockquote-footer {
+  .card-bodyquote .blockquote-footer {
     color: rgba(255, 255, 255, .85);
   }
 
