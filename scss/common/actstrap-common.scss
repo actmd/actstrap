@@ -70,7 +70,7 @@ body > .container-fluid.full-width {
 }
 
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
-.card-block > :last-child,
+.card-body > :last-child,
 .list-group-item > :last-child,
 .card-footer > :last-child,
 .card > .list-group:last-child {
@@ -86,7 +86,7 @@ body > .container-fluid.full-width {
   .card-link,
   .card-text,
   .card-subtitle,
-  .card-blockquote .blockquote-footer {
+  .card-bodyquote .blockquote-footer {
     color: rgba(255, 255, 255, .85);
   }
 
