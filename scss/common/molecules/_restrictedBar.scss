@@ -1,7 +1,8 @@
 .restricted-bar {
   background-color: $state-info-bg;
   color: $state-info-text;
-
+  line-height: 30px;
+  
   @include media-breakpoint-up(sm) {
     .breadcrumb + & {
       margin-bottom: 1em;

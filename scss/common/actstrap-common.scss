@@ -8,6 +8,19 @@ $input-padding-x-lg: 0.75rem;
 $enable-flex: 1;
 
 @import "bootstrap";
+@import "functions";
+@import "variables";
+
+// Pulled from bootstrap 4.0.alpha5 for compatibility until we can figure out what we wanna do with them
+$state-success-text: #3c763d !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7 !default;
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-success-bg: #dff0d8 !default;
+$brand-primary:         darken(#428bca, 6.5%) !default;
 
 // We're bringing this in from the beta, since button groups are flawed in alpha
 $input-btn-padding-x: .75rem !default;
@@ -29,11 +42,12 @@ body > .container-fluid.full-width {
   line-height: 1.3;
 }
 
-.tag {
+.badge {
   /* In our font, the small label text needs to be a bit lighter. */
   font-weight: 300;
   /* By Bootstrap's default, tags don't seem to align with nearby text quite right */
   vertical-align: 1px;
+  color: white;
 }
 
 .list-group {
@@ -56,7 +70,7 @@ body > .container-fluid.full-width {
 }
 
 /* By and large, a container's padding should be enough without its last element's bottom margin. */
-.card-block > :last-child,
+.card-body > :last-child,
 .list-group-item > :last-child,
 .card-footer > :last-child,
 .card > .list-group:last-child {
@@ -103,7 +117,7 @@ body > .container-fluid.full-width {
 }
 
 /* Labels within a list-group-item need their positioning tweaked just a bit. */
-.list-group-item .tag.float-xs-right {
+.list-group-item .badge.float-right {
   margin-top: 3px;
 }
 
@@ -120,15 +134,13 @@ body > .container-fluid.full-width {
 }
 
 @import "atoms/applicationNotice";
-@import "atoms/tagMuted";
+@import "atoms/badgeMuted";
 @import "atoms/textMinor";
 @import "atoms/skinnyHeader";
-@import "atoms/userPresenceIndicator";
-@import "atoms/tagClear";
-@import "atoms/permissionCheckbox";
+@import "atoms/badgeClear";
 @import "atoms/personPreview";
-@import "atoms/cardBlockScroll";
-@import "atoms/activePillTag";
+@import "atoms/cardBodyScrolling";
+@import "atoms/activePillBadge";
 @import "atoms/backgroundBranded";
 @import "atoms/buttonClear";
 
