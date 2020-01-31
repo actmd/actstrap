@@ -86,7 +86,7 @@ body > .container-fluid.full-width {
   .card-link,
   .card-text,
   .card-subtitle,
-  .card-bodyquote .blockquote-footer {
+  .card-blockquote .blockquote-footer {
     color: rgba(255, 255, 255, .85);
   }
 
@@ -139,7 +139,7 @@ body > .container-fluid.full-width {
 @import "atoms/skinnyHeader";
 @import "atoms/badgeClear";
 @import "atoms/personPreview";
-@import "atoms/cardBlockScroll";
+@import "atoms/cardBodyScrolling";
 @import "atoms/activePillBadge";
 @import "atoms/backgroundBranded";
 @import "atoms/buttonClear";
