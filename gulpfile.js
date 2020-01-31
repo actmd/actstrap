@@ -101,8 +101,11 @@ gulp.task('copy-patterns-css', function() {
  */
 gulp.task('copy-patterns-js', function() {
   return gulp.src([
+    'node_modules/popper.js/dist/umd/popper.min.js',
+    'node_modules/popper.js/dist/umd/popper.min.js.map',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js.map',
     'node_modules/tether/dist/js/tether.min.js'
   ]).pipe(gulp.dest('./out/js'))
 });
@@ -263,7 +266,7 @@ function normalizeMobileSnippets() {
     }
 
     var updatedContents = file.contents.toString().replace(find, replace);
-    file.contents = new Buffer(updatedContents);
+    file.contents = new Buffer.from(updatedContents);
 
     this.push(file);
     cb();
@@ -291,7 +294,7 @@ function renderTemplates(variant, path) {
 
     this.push(new File({
       path: path,
-      contents: new Buffer(tmpl({
+      contents: new Buffer.from(tmpl({
         isMobile: isMobile,
         variant: variant,
         snippets: snippets

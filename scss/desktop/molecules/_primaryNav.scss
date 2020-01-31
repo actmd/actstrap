@@ -2,8 +2,17 @@
 
 .navbar-primary {
   .navbar-brand img {
-    height: 29px;
+    max-width: 200px;
+    max-height: 50px;
   }
+
+  .navbar-product {
+    font-size: 85%;
+    padding: 0.5rem 0.5rem 0;
+    color: white;
+  }
+
+  .form-control { font-weight: 300; }
 
   .nav-link {
     > .zmdi {
@@ -14,11 +23,17 @@
     .rounded-circle {
       width: 21px;
       height: 21px;
+      color: white;
+      font-size: 85%;
     }
   }
 
-  .tag {
+  .badge {
     padding-top:0.15em;
   }
 
+  .dropdown-menu {
+    min-width: 15rem;
+    line-height: 1.3;
+  }
 }

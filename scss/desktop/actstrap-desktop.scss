@@ -1,6 +1,11 @@
 // Import Bootstrap mixins and variables
 @import "mixins";
+@import "functions";
 @import "variables";
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
 
 @import "molecules/tableHeadless";
 @import "molecules/tableIconPrefix";
@@ -14,7 +19,6 @@
 @import "molecules/personSelector";
 @import "molecules/taskButtonGroup";
 @import "molecules/definitionListGroup";
-@import "molecules/iconCallout";
 @import "molecules/navbarPageButtons";
 @import "molecules/dropdownSelectSearch";
 
@@ -24,7 +28,6 @@
 @import "organisms/tablePeople";
 @import "organisms/tableProfile";
 @import "organisms/listGroupMenu";
-@import "organisms/discussionPanelCompact";
 @import "organisms/tableParticipants";
 @import "organisms/sectionCard";
 @import "organisms/tableActivities";
