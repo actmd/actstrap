@@ -21,7 +21,7 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.12.9",
-    "selectize": "0.12.4"
+    "selectize": "0.12.6"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
