@@ -31,7 +31,7 @@
     "handlebars": "^4.7.0",
     "html-to-json": "^0.6.0",
     "minimist": "^1.2.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.3",
     "path": "^0.12.7",
     "tether": "^1.4.5",
     "through2": "^2.0.3"
