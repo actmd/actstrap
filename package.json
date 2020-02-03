@@ -20,7 +20,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.12.9",
+    "popper.js": "^1.16.1",
     "selectize": "0.12.4"
   },
   "devDependencies": {
