@@ -13,6 +13,7 @@ Our pattern library is organized by target device, and compiled into three outpu
 ## quickstart
 
 ### Install gulp and npm dependencies
+Make sure you're using version 10 of node.  Use NVM (https://github.com/nvm-sh/nvm) or the tool of your choice to make that happen
 
 ```
 $ npm install --global gulp-cli
