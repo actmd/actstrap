@@ -30,7 +30,7 @@
     "gulp-util": "^3.0.8",
     "handlebars": "^4.7.0",
     "html-to-json": "^0.6.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.4",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "tether": "^1.4.5",
