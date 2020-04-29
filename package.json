@@ -19,7 +19,7 @@
   "homepage": "http://patterns.act.md",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.12.9",
     "selectize": "0.12.4"
   },
