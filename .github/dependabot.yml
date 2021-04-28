@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+  - dependency-name: tether
+    versions:
+    - 1.4.7
